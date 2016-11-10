@@ -10,7 +10,7 @@ import com.fruitbasket.sensordatacollection.utilities.ExcelProcessor;
 public class MagsCollectionTask implements Runnable {
 
 	private MagsSensor[] magsSensorDatas;
-	private int length=0;//��������Ч���ݵĳ���
+	private int length=0;
 	
 	public MagsCollectionTask(MagsSensor[] magsSensorDatas,int length){
 		this.magsSensorDatas=MagsSensor.objectArrayDeepCopyOf(magsSensorDatas, length);

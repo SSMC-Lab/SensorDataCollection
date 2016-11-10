@@ -10,7 +10,7 @@ import com.fruitbasket.sensordatacollection.utilities.ExcelProcessor;
 public class PressureCollectionTask implements Runnable {
 
 	private PressureSensor[] pressureSensorDatas;
-	private int length=0;//��������Ч���ݵĳ���
+	private int length=0;
 	
 	public PressureCollectionTask(PressureSensor[] pressureSensorDatas,int length){
 		this.pressureSensorDatas=PressureSensor.objectArrayDeepCopyOf(pressureSensorDatas, length);

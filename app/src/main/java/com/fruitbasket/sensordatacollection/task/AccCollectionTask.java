@@ -10,7 +10,7 @@ import com.fruitbasket.sensordatacollection.utilities.ExcelProcessor;
 public class AccCollectionTask implements Runnable {
 
 	private AccSensor[] accSensorDatas;
-	private int length=0;//��������Ч���ݵĳ���
+	private int length=0;
 	
 	public AccCollectionTask(AccSensor[] datas,int length){
 		this.accSensorDatas=AccSensor.objectArrayDeepCopyOf(datas, length);

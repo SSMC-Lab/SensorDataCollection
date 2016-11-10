@@ -16,22 +16,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends Activity {
     private static final String TAG = "MainActivity";
@@ -124,11 +115,8 @@ public class MainActivity extends Activity {
                         chooseSensor[5] = rot.isChecked();
                         chooseSensor[6] = tem.isChecked();
                         alertDialog.dismiss();
-//                        stopCollection();
                         dcServiceIntent = new Intent(MainActivity.this, DataCollectionService.class);
                         handler.sendMessage(new Message());
-//                        for(int i =1;i<=6;i++)
-//                       Log.d(TAG,"you choose "+i +chooseSensor[i]);
                     }
                 });
                 builder.setView(view);

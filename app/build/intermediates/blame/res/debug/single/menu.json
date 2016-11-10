@@ -2,5 +2,9 @@
     {
         "merged": "C:\\algorithm\\Demo1\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "C:\\algorithm\\Demo1\\SensorDataCollection\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\menu\\main.xml"
     }
 ]

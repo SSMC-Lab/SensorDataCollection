@@ -10,7 +10,7 @@ import com.fruitbasket.sensordatacollection.utilities.ExcelProcessor;
 public class RotationCollectionTask implements Runnable {
 
 	private RotationSensor[] rotationSensorDatas;
-	private int length=0;//��������Ч���ݵĳ���
+	private int length=0;
 	
 	public RotationCollectionTask(RotationSensor[] rotationSensorDatas,int length){
 		this.rotationSensorDatas=RotationSensor.objectArrayDeepCopyOf(rotationSensorDatas, length);

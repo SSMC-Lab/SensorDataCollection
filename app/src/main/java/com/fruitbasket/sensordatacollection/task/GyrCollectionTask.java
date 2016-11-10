@@ -10,7 +10,7 @@ import com.fruitbasket.sensordatacollection.utilities.ExcelProcessor;
 public class GyrCollectionTask implements Runnable {
 
 	private GyrSensor[] gyrSensorDatas;
-	private int length=0;//��������Ч���ݵĳ���
+	private int length=0;
 	
 	public GyrCollectionTask(GyrSensor[] gyrSensorDatas,int length){
 		this.gyrSensorDatas=GyrSensor.objectArrayDeepCopyOf(gyrSensorDatas, length);

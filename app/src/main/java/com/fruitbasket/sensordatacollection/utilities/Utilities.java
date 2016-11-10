@@ -20,7 +20,7 @@ public class Utilities {
 	}
 	
 	/**
-	 * ´´½¨ÎÄ¼ş¼Ğ¡£ÎÄ¼ş¼ĞËùÔÚµÄÂ·¾¶±ØĞëÔ­ÏÈ¾Í´æÔÚ
+	 * åˆ›å»ºæ–‡ä»¶å¤¹ã€‚æ–‡ä»¶å¤¹æ‰€åœ¨çš„è·¯å¾„å¿…é¡»åŸå…ˆå°±å­˜åœ¨
 	 * @param dir
 	 */
 	public static void createDir(String dir){
@@ -31,7 +31,7 @@ public class Utilities {
 	}
 	
 	/**
-	 * ´´½¨ÎÄ¼ş¼Ğ
+	 * åˆ›å»ºæ–‡ä»¶å¤¹
 	 * @param dir
 	 */
 	public static void createDirs(String dir){
@@ -42,9 +42,9 @@ public class Utilities {
 	}
 	
 	/**
-	 * ´´½¨ÎÄ¼ş¡£ÎÄ¼şËùÔÚµÄÂ·¾¶±ØĞëÔ­ÏÈ¾Í´æÔÚ
+	 * åˆ›å»ºæ–‡ä»¶ã€‚æ–‡ä»¶æ‰€åœ¨çš„è·¯å¾„å¿…é¡»åŸå…ˆå°±å­˜åœ¨
 	 * @param filePath
-	 * @return true£ºÖ´ĞĞ´´½¨£»false£ºÃ»Ö´ĞĞ´´½¨£¬ÎÄ¼şÔ­ÏÈÒÑ¾­´æÔÚ
+	 * @return trueï¼šæ‰§è¡Œåˆ›å»ºï¼›falseï¼šæ²¡æ‰§è¡Œåˆ›å»ºï¼Œæ–‡ä»¶åŸå…ˆå·²ç»å­˜åœ¨
 	 * @throws IOException
 	 */
 	public static boolean createFile(String filePath) 
@@ -67,7 +67,7 @@ public class Utilities {
 	
 	/**
 	 * @param context
-	 * @param className ///
+	 * @param className
 	 * @return
 	 */
 	public static boolean isServiceRunning(Context context, String className) {

@@ -1,5 +1,13 @@
 [
     {
+        "merged": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\layout\\alertlayout.xml",
+        "source": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\layout\\alertlayout.xml"
+    },
+    {
         "merged": "C:\\algorithm\\Demo1\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "C:\\algorithm\\Demo1\\SensorDataCollection\\app\\src\\main\\res\\layout\\activity_main.xml"
     },

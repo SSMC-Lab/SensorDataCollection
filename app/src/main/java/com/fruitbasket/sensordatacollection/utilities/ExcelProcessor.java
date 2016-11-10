@@ -21,7 +21,7 @@ public class ExcelProcessor {
 	}
 
 	/**
-	 * ÏòExcel±í¸ñ×·¼Ó¶à¸öÊı¾İĞĞ¡£²ÎÊı±ØĞëÒªÕıÈ·
+	 * å‘Excelè¡¨æ ¼è¿½åŠ å¤šä¸ªæ•°æ®è¡Œã€‚å‚æ•°å¿…é¡»è¦æ­£ç¡®
 	 * @param excelFile
 	 * @param accSensorDatas
 	 * @return
@@ -115,11 +115,11 @@ public class ExcelProcessor {
 	}
 	
 	/**
-	 * Èç¹ûÎÒÄØ¼ä²»´æÔÚ£¬´´½¨´ø±íÍ·µÄExcelÎÄ¼ş
-	 * ·ÇÏß³Ì°²È«·½·¨£¬½öÓÃÓÚ´´½¨ÎÄ¼ş
+	 * å¦‚æœæˆ‘å‘¢é—´ä¸å­˜åœ¨ï¼Œåˆ›å»ºå¸¦è¡¨å¤´çš„Excelæ–‡ä»¶
+	 * éçº¿ç¨‹å®‰å…¨æ–¹æ³•ï¼Œä»…ç”¨äºåˆ›å»ºæ–‡ä»¶
 	 * @param excelFile
 	 * @param header
-	 * @return true:´´½¨ÁËÎÄ¼ş£»false: Ã»ÓĞ´´½¨ÎÄ¼ş
+	 * @return true:åˆ›å»ºäº†æ–‡ä»¶ï¼›false: æ²¡æœ‰åˆ›å»ºæ–‡ä»¶
 	 * @throws IOException
 	 */
 	public static boolean createFileWithHeader(File excelFile,String[] header) 

@@ -1,78 +1,78 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:2:1-35:12
+ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:3:5-51
-		INJECTED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml
-		INJECTED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:3:5-51
+		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
+		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:5:5-30
-		INJECTED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml
-		INJECTED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
+		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
 	android:versionCode
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:4:5-28
-		INJECTED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml
-		INJECTED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
+		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:22.2.0] C:\algorithm\Demo1\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\algorithm\Demo1\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\algorithm\Demo1\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:22.2.0] C:\algorithm\Demo1\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:22.2.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:22.2.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:9:9-38
-		INJECTED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml
-		INJECTED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
+		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:8:9-34
-		INJECTED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml
-		INJECTED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:8:9-34
+		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
+		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:10:5-80
+ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:10:5-80
 	android:name
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:10:22-78
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:10:22-78
 application
-ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:12:5-33:19
-MERGED from [com.android.support:support-v4:22.2.0] C:\algorithm\Demo1\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] C:\algorithm\Demo1\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\algorithm\Demo1\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:22.2.0] C:\algorithm\Demo1\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:12:5-33:19
+MERGED from [com.android.support:support-v4:22.2.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:22.2.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:16:9-41
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:16:9-41
 	android:allowBackup
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:14:9-35
 	android:icon
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:15:9-45
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:15:9-45
 	android:theme
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:17:9-40
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:17:9-40
 	android:name
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:13:9-66
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:13:9-66
 activity#com.fruitbasket.sensordatacollection.MainActivity
-ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:18:9-26:20
+ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:18:9-26:20
 	android:label
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:20:13-45
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:20:13-45
 	android:name
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:19:13-77
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:19:13-77
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:24:27-74
 service#com.fruitbasket.sensordatacollection.DataCollectionService
-ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:27:9-28:19
+ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:27:9-28:19
 	android:name
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:27:18-91
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:27:18-91
 meta-data#com.google.android.gms.version
-ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:30:9-32:69
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] C:\algorithm\Demo1\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
+ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:30:9-32:69
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:32:13-66
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:32:13-66
 	android:name
-		ADDED from C:\algorithm\Demo1\SensorDataCollection\app\src\main\AndroidManifest.xml:31:13-58
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:31:13-58

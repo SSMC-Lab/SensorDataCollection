@@ -10,7 +10,7 @@ import com.fruitbasket.sensordatacollection.utilities.ExcelProcessor;
 public class TemperatureCollectionTask implements Runnable {
 
 	private TemperatureSensor[] temperatureSensorDatas;
-	private int length=0;//��������Ч���ݵĳ���
+	private int length=0;
 	
 	public TemperatureCollectionTask(TemperatureSensor[] temperatureSensorDatas,int length){
 		this.temperatureSensorDatas=TemperatureSensor.objectArrayDeepCopyOf(temperatureSensorDatas, length);

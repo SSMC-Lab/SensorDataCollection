@@ -19,7 +19,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Binder;
 import android.os.IBinder;
-import android.provider.CalendarContract.Events;
 import android.util.Log;
 
 public class DataCollectionService extends Service {

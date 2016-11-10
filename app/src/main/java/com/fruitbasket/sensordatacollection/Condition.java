@@ -23,9 +23,9 @@ public final class Condition {
 	public static final File GYR_EXCEL=new File(DATA_DIR+"/gyr.xls");
 	public static final File MAGS_EXCEL=new File(DATA_DIR+"/mags.xls");
 	
-	//public static final int THREAD_NUM=6;   //ÓÃÓÚ²É¼¯´«¸ĞÆ÷µÄÏß³ÌÊıÁ¿¡£
+	//public static final int THREAD_NUM=6;   //ç”¨äºé‡‡é›†ä¼ æ„Ÿå™¨çš„çº¿ç¨‹æ•°é‡ã€‚
 	 
-	public static final int FAST_FLUSH_INTERVAL=100;//´«¸ĞÆ÷Ã¿²É¼¯FAST_FLUSH_INTERVAL´ÎÊı¾İ£¬¾Í½«Êı¾İÊä³öµ½ÎÄ¼ş
+	public static final int FAST_FLUSH_INTERVAL=100;//ä¼ æ„Ÿå™¨æ¯é‡‡é›†FAST_FLUSH_INTERVALæ¬¡æ•°æ®ï¼Œå°±å°†æ•°æ®è¾“å‡ºåˆ°æ–‡ä»¶
 	public static final int MID_FLUSH_INTERVAL=50;
 	public static final int SLOW_FLUSH_INTERVAL=5;
 	
