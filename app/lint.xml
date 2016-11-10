@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="NewApi">
+        <ignore path="src/com/fruitbasket/sensordatacollection/DataCollectionService.java" />
+        <ignore path="src/com/fruitbasket/sensordatacollection/DataCollectionTask.java" />
+        <ignore path="src/com/fruitbasket/sensordatacollection/MainActivity.java" />
+        <ignore path="src/com/fruitbasket/sensordatacollection/task/AccCollectionTask.java" />
+    </issue>
+</lint>
