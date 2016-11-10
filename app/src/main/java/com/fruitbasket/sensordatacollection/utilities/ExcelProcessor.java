@@ -115,7 +115,7 @@ public class ExcelProcessor {
 	}
 	
 	/**
-	 * 如果我呢间不存在，创建带表头的Excel文件
+	 * 如果文件不存在，创建带表头的Excel文件
 	 * 非线程安全方法，仅用于创建文件
 	 * @param excelFile
 	 * @param header
