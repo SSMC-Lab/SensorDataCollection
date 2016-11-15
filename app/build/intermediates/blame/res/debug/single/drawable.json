@@ -14,5 +14,13 @@
     {
         "merged": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
         "source": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\drawable\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\AndroidProject\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logoall.png",
+        "source": "C:\\AndroidProject\\SensorDataCollection\\app\\src\\main\\res\\drawable\\logoall.png"
+    },
+    {
+        "merged": "C:\\AndroidProject\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
+        "source": "C:\\AndroidProject\\SensorDataCollection\\app\\src\\main\\res\\drawable\\ic_launcher.png"
     }
 ]

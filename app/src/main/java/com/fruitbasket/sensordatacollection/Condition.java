@@ -22,7 +22,7 @@ public final class Condition {
 	public static final File ACC_EXCEL=new File(DATA_DIR+"/acc.xls");
 	public static final File GYR_EXCEL=new File(DATA_DIR+"/gyr.xls");
 	public static final File MAGS_EXCEL=new File(DATA_DIR+"/mags.xls");
-	
+	public static final File ORIENTATION_EXCEL = new File(DATA_DIR+"/orientation.xls");
 	//public static final int THREAD_NUM=6;   //用于采集传感器的线程数量。
 	 
 	public static final int FAST_FLUSH_INTERVAL=100;//传感器每采集FAST_FLUSH_INTERVAL次数据，就将数据输出到文件

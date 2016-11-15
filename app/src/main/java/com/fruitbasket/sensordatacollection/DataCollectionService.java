@@ -5,6 +5,7 @@ import java.util.concurrent.Executors;
 import com.fruitbasket.sensordatacollection.sensor.AccSensor;
 import com.fruitbasket.sensordatacollection.sensor.GyrSensor;
 import com.fruitbasket.sensordatacollection.sensor.MagsSensor;
+import com.fruitbasket.sensordatacollection.sensor.OrientationSensor;
 import com.fruitbasket.sensordatacollection.sensor.PressureSensor;
 import com.fruitbasket.sensordatacollection.sensor.RotationSensor;
 import com.fruitbasket.sensordatacollection.sensor.TemperatureSensor;
@@ -33,6 +34,7 @@ public class DataCollectionService extends Service {
 	private ExecutorService pressureExecutor;
 	private ExecutorService rotationExecutor;
 	private ExecutorService temperatureExecutor;
+	private ExecutorService orientationExecutor;
 	
 	private AccSensor[] accSensorDatas;
 	private GyrSensor[] gyrSensorDatas;
@@ -40,6 +42,7 @@ public class DataCollectionService extends Service {
 	private PressureSensor[] pressureSensorDatas;
 	private RotationSensor[] rotationSensorDatas;
 	private TemperatureSensor[] temperatureSensorDatas;
+	private OrientationSensor[] orientationSensorsDatas;
 	
 	private int accLength=0;
 	private int gyrLength=0;
@@ -47,11 +50,13 @@ public class DataCollectionService extends Service {
 	private int pressureLength=0;
 	private int rotationLength=0;
 	private int temperatureLength=0;
+	private int orientationLength = 0;
 	
 	//aid data
 	private float[] rotationMatrix=new float[16];
 	private float[] accels=new float[3];
 	private float[] mags=new float[3];
+	private float[] orientation = new float[3];
 	
 	@Override
 	public void onCreate(){
@@ -61,6 +66,11 @@ public class DataCollectionService extends Service {
 		mySensorListener = new mySensorListener();
 
 		int i;
+		orientationSensorsDatas = new OrientationSensor[Condition.FAST_FLUSH_INTERVAL];
+		for( i = 0;i<orientationSensorsDatas.length;++i){
+			orientationSensorsDatas[i] = new OrientationSensor();
+		}
+		orientationExecutor = Executors.newSingleThreadExecutor();
 		if(MainActivity.chooseSensor[1]) {
 			accSensorDatas = new AccSensor[Condition.FAST_FLUSH_INTERVAL];
 			for (i = 0; i < accSensorDatas.length; ++i) {
@@ -198,6 +208,49 @@ public class DataCollectionService extends Service {
 	}
 
 	class mySensorListener implements SensorEventListener{
+		//计算方向
+		private void calculateOrientation() {
+			float[] values = new float[3];
+			float[] R = new float[9];
+			SensorManager.getRotationMatrix(R, null, accSensorDatas[accLength].accels,
+					magsSensorDatas[magsLength].mags);
+			SensorManager.getOrientation(R, values);
+			orientationSensorsDatas[orientationLength].time=Utilities.getTime();
+			orientationSensorsDatas[orientationLength].orientation[0]=values[0];
+			orientationSensorsDatas[orientationLength].orientation[1]=values[1];
+			orientationSensorsDatas[orientationLength].orientation[2]=values[2];
+			orientation = values;
+			++orientationLength;
+			if(orientationLength>=orientationSensorsDatas.length){
+				orientationExecutor.execute(new OrientationCollectionTask(orientationSensorsDatas,orientationSensorsDatas.length));
+				orientationLength = 0 ;
+			}
+
+		}
+
+		private void calculateAcc(){
+			float y0 =(float) (-Math.sin(orientation[1]));
+			float y1 =(float) (Math.cos(orientation[1])*Math.cos(orientation[0]));
+			float y2 =(float) (Math.cos(orientation[1])*Math.sin(orientation[1]));
+
+			float temp =(float) (Math.acos(-(Math.tan(orientation[1])*Math.tan(orientation[2]))));
+			float x0 =(float) (-Math.sin(orientation[2]));
+			float x1 =(float) (Math.cos(orientation[2])*Math.cos(orientation[0]+temp));
+			float x2 = (float) (Math.cos(orientation[2])*Math.sin(orientation[0]+temp));
+
+			float z0 = x2*y1-x1*y2;
+			float z1 = x0*y2-x2*y0;
+			float z2 = x1*y0-x0*y1;
+
+			float a0 = accels[0]*x0+accels[1]*y0+accels[2]*z0+SensorManager.STANDARD_GRAVITY;//(这里加上标准重力加速度以抵消默认的重力加速度)
+			float a1 = accels[0]*x1+accels[1]*y1+accels[2]*z1;
+			float a2 = accels[0]*x2+accels[1]*y2+accels[2]*z2 ;
+
+			accSensorDatas[accLength].time=Utilities.getTime();
+			accSensorDatas[accLength].accels[0]=a0;
+			accSensorDatas[accLength].accels[1]=a1;
+			accSensorDatas[accLength].accels[2]=a2;
+		}
 
 		@Override
 		public void onAccuracyChanged(Sensor arg0, int arg1) {}
@@ -207,11 +260,8 @@ public class DataCollectionService extends Service {
 			switch(event.sensor.getType()){
 			case Sensor.TYPE_LINEAR_ACCELERATION:///
 				//Log.d(TAG,"linear acceleration changed");
-				accSensorDatas[accLength].time=Utilities.getTime();
-				accSensorDatas[accLength].accels[0]=event.values[0];
-				accSensorDatas[accLength].accels[1]=event.values[1];
-				accSensorDatas[accLength].accels[2]=event.values[2];
 				accels=event.values;
+				calculateAcc();
 				++accLength;
 				if(accLength>=accSensorDatas.length){
 					accExecutor.execute(new AccCollectionTask(accSensorDatas,accSensorDatas.length));
@@ -276,6 +326,9 @@ public class DataCollectionService extends Service {
 					temperatureLength=0;
 				}
 				break;
+			default:
+				calculateOrientation();
+
 			}
 		}
 		

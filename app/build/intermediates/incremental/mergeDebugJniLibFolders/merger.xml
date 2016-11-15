@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\AndroidProject\SensorDataCollection\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\AndroidProject\SensorDataCollection\app\src\debug\jniLibs"/></dataSet></merger>

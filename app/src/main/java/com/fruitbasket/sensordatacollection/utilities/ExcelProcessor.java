@@ -7,6 +7,7 @@ import java.io.RandomAccessFile;
 import com.fruitbasket.sensordatacollection.sensor.AccSensor;
 import com.fruitbasket.sensordatacollection.sensor.GyrSensor;
 import com.fruitbasket.sensordatacollection.sensor.MagsSensor;
+import com.fruitbasket.sensordatacollection.sensor.OrientationSensor;
 import com.fruitbasket.sensordatacollection.sensor.PressureSensor;
 import com.fruitbasket.sensordatacollection.sensor.RotationSensor;
 import com.fruitbasket.sensordatacollection.sensor.TemperatureSensor;
@@ -41,7 +42,22 @@ public class ExcelProcessor {
 		randomAccessFile.close();
 		return true;
 	}
-	
+
+	public synchronized static boolean appendDataQuickly(File excelFile, OrientationSensor accSensorDatas[], int length)
+			throws IOException{
+		RandomAccessFile randomAccessFile=new RandomAccessFile(excelFile,"rwd");
+		randomAccessFile.seek(excelFile.length());
+		for(int i=0;i<length;++i){
+			randomAccessFile.writeBytes(accSensorDatas[i].time+"	");
+			randomAccessFile.writeBytes(accSensorDatas[i].orientation[0]+"	");
+			randomAccessFile.writeBytes(accSensorDatas[i].orientation[1]+"	");
+			randomAccessFile.writeBytes(accSensorDatas[i].orientation[2]+"	");
+			randomAccessFile.write('\n');
+		}
+		randomAccessFile.close();
+		return true;
+	}
+
 	public synchronized static boolean appendDataQuickly(File excelFile,GyrSensor gyrSensorDatas[],int length) 
 			throws IOException{
 		RandomAccessFile randomAccessFile=new RandomAccessFile(excelFile,"rwd");
