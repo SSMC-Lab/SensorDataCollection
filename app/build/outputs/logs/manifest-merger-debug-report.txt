@@ -6,7 +6,7 @@ ADDED from C:\AndroidProject\SensorDataCollection\app\src\main\AndroidManifest.x
 		INJECTED from C:\AndroidProject\SensorDataCollection\app\src\main\AndroidManifest.xml
 		INJECTED from C:\AndroidProject\SensorDataCollection\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\AndroidProject\SensorDataCollection\app\src\main\AndroidManifest.xml:5:5-30
+		ADDED from C:\AndroidProject\SensorDataCollection\app\src\main\AndroidManifest.xml:5:5-32
 		INJECTED from C:\AndroidProject\SensorDataCollection\app\src\main\AndroidManifest.xml
 		INJECTED from C:\AndroidProject\SensorDataCollection\app\src\main\AndroidManifest.xml
 	android:versionCode

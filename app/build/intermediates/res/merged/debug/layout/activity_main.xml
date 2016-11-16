@@ -47,7 +47,7 @@
         android:layout_gravity="left"
         android:textSize="18sp"
         android:textColor="@android:color/black"
-        android:text="v-2.1.0"
+        android:text="v-2.1.1"
         android:layout_weight="1"/>
     </LinearLayout>
  </LinearLayout>
