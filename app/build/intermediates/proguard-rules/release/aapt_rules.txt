@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:29
+-keep class com.fruitbasket.sensordatacollection.DataCollectionService { <init>(...); }
+
+# view AndroidManifest.xml #generated:19
+-keep class com.fruitbasket.sensordatacollection.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:13
+-keep class com.fruitbasket.sensordatacollection.MyApp { <init>(...); }
+
