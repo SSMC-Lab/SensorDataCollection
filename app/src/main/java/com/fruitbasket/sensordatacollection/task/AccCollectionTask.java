@@ -20,9 +20,7 @@ public class AccCollectionTask implements Runnable {
 	@Override
 	public void run() {
 		try {
-			MainActivity.isready[1] =false;
-			ExcelProcessor.appendDataQuickly(Condition.ACC_EXCEL, accSensorDatas,length);
-			MainActivity.isready[1]=true;
+			ExcelProcessor.appendDataQuickly(Condition.getAccExcel(), accSensorDatas,length);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

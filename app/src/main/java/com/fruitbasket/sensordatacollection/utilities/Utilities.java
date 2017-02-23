@@ -8,8 +8,14 @@ import java.util.List;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.util.Log;
+
+import com.fruitbasket.sensordatacollection.Condition;
+
+import static com.fruitbasket.sensordatacollection.Condition.APP_FILE_DIR;
 
 public class Utilities {
+	private static final String TAG="utilities.Utilities";
 	
 	private static Utilities mUtilities=new Utilities();
 	
@@ -18,48 +24,101 @@ public class Utilities {
 	public static Utilities getInstance(){
 		return mUtilities;
 	}
-	
+
 	/**
-	 * 创建文件夹。文件夹所在的路径必须原先就存在
-	 * @param dir
+	 *
 	 */
-	public static void createDir(String dir){
-		File appDir=new File(dir);
-		if(appDir.exists()==false){
-			appDir.mkdir();
+	public static final boolean createDataFile(){
+		Log.i(TAG,"createDataFile()");
+
+		File appFileDir=new File(APP_FILE_DIR);
+		if(appFileDir.exists()==false||appFileDir.isDirectory()==false){
+			appFileDir.mkdirs();
 		}
-	}
-	
-	/**
-	 * 创建文件夹
-	 * @param dir
-	 */
-	public static void createDirs(String dir){
-		File appDir=new File(dir);
-		if(appDir.exists()==false){
-			appDir.mkdirs();
-		}
-	}
-	
-	/**
-	 * 创建文件。文件所在的路径必须原先就存在
-	 * @param filePath
-	 * @return true：执行创建；false：没执行创建，文件原先已经存在
-	 * @throws IOException
-	 */
-	public static boolean createFile(String filePath) 
-			throws IOException{
-		File file=new File(filePath);
-		if(file.exists()==false){
-			file.createNewFile();
-			return true;
+
+		int maxNumber=0;
+		int tem;
+		String[] names=appFileDir.list();
+		if(names!=null){
+			Log.d(TAG,"names!=null");
+			for(String name:names){
+				if(name.matches("[0-9]{1,}")) {
+					Log.i(TAG,"name.matches(\"[0-9]{1,}\")==ture");
+					tem = Integer.parseInt(name);
+					if (maxNumber < tem) {
+						maxNumber = tem;
+					}
+				}
+				else{
+					Log.i(TAG,"name.matches(\"[0-9]{1,}\")==false");
+					continue;
+				}
+			}
 		}
 		else{
-			return false;
+			Log.d(TAG,"names==null");
 		}
+		Log.i(TAG,"maxNumber=="+maxNumber);
+
+		String subDir;
+		subDir=appFileDir.getPath()+"/"+(maxNumber+1);
+		(new File(subDir)).mkdir();
+
+		try {
+			String[] dataLine;
+
+			Condition.setPreAltExcel(new File(subDir+"/"+ Condition.PRE_ALT_FILENAME));
+			Log.i(TAG,"the path is : "+subDir+"/"+ Condition.PRE_ALT_FILENAME);
+			if(Condition.getPreAltExcel().exists()==false){
+				Log.i(TAG,"Condition.getPreAltExcel().exists()==false");
+				dataLine=new String[]{"Time","Pressure","Altitude"};
+				ExcelProcessor.createFileWithHeader(Condition.getPreAltExcel(),dataLine);
+			}
+
+			Condition.setTemperatureExcel(new File(subDir+"/"+Condition.TEMPERATURE_FILENAME));
+			if(Condition.getTemperatureExcel().exists()==false){
+				Log.i(TAG,"Condition.getTemperatureExcel().exists()==false");
+				dataLine=new String[]{"Time","Temperature"};
+				ExcelProcessor.createFileWithHeader(Condition.getTemperatureExcel(),dataLine);
+			}
+
+			Condition.setRotationExcel(new File(subDir+"/"+Condition.ROTATION_FILENAME));
+			if(Condition.getRotationExcel().exists()==false){
+				Log.i(TAG,"Condition.getRotationExcel().exists()==false");
+				dataLine=new String[]{"Time","Pitch(x)","Roll(y)","Azimuth(z)"};
+				ExcelProcessor.createFileWithHeader(Condition.getRotationExcel(),dataLine);
+			}
+
+			Condition.setAccExcel(new File(subDir+"/"+Condition.ACC_FILENAME));
+			if(Condition.getAccExcel().exists()==false){
+				Log.i(TAG,"Condition.getAccExcel().exists()==false");
+				dataLine=new String[]{"Time","accX","accY","accZ"};
+				ExcelProcessor.createFileWithHeader(Condition.getAccExcel(),dataLine);
+			}
+
+			Condition.setGyrExcel(new File(subDir+"/"+Condition.GYR_FILENAME));
+			if(Condition.getGyrExcel().exists()==false){
+				Log.i(TAG,"Condition.getGyrExcel().exists()==false");
+				dataLine=new String[]{"Time","gyrX","gyrY","gyrZ"};
+				ExcelProcessor.createFileWithHeader(Condition.getGyrExcel(),dataLine);
+			}
+
+			Condition.setMagsExcel(new File(subDir+"/"+Condition.MAGS_FILENAME));
+			if(Condition.getMagsExcel().exists()==false){
+				Log.i(TAG,"Condition.getMagsExcel().exists()==false");
+				dataLine=new String[]{"Time","magX","magY","magZ"};
+				ExcelProcessor.createFileWithHeader(Condition.getMagsExcel(),dataLine);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return true;
 	}
 
-	
+	/**
+	 *
+	 * @return
+     */
 	public static String getTime(){
 		return new SimpleDateFormat("HH:mm:ss:SSS").format(new Date());
 	}

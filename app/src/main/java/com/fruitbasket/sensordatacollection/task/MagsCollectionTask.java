@@ -20,9 +20,7 @@ public class MagsCollectionTask implements Runnable {
 	@Override
 	public void run() {
 		try {
-			MainActivity.isready[3] =false;
-			ExcelProcessor.appendDataQuickly(Condition.MAGS_EXCEL, magsSensorDatas,length);
-			MainActivity.isready[3] = true;
+			ExcelProcessor.appendDataQuickly(Condition.getMagsExcel(), magsSensorDatas,length);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -41,8 +41,8 @@ public final class R {
 	public static final class raw {
 	}
 	public static final class string {
-		public static final int auth_google_play_services_client_facebook_display_name = 0x7f040020;
-		public static final int auth_google_play_services_client_google_display_name = 0x7f040021;
+		public static final int auth_google_play_services_client_facebook_display_name = 0x7f040029;
+		public static final int auth_google_play_services_client_google_display_name = 0x7f04002a;
 		public static final int common_android_wear_notification_needs_update_text = 0x7f040000;
 		public static final int common_android_wear_update_text = 0x7f040001;
 		public static final int common_android_wear_update_title = 0x7f040002;

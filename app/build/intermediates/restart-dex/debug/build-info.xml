@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="armeabi-v7a,armeabi"
-    api-level="19"
-    density="xxxhdpi"
-    format="7"
-    timestamp="87600051935655"
-    token="5770506160514897819" >
+    api-level="23"
+    density="xhdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="89896399498406"
+    token="-3622014409277865363"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="147" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="8" />
     <task
         name="verifier"
-        duration="0" />
+        duration="1" />
 
     <artifact
-        location="C:\algorithm\Demo1\SensorDataCollection\app\build\outputs\apk\app-debug.apk"
+        location="E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="87600051935655" >
+    <build
+        timestamp="275305813605575"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\algorithm\Demo1\SensorDataCollection\app\build\outputs\apk\app-debug.apk"
+            location="E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
 

@@ -20,9 +20,7 @@ public class PressureCollectionTask implements Runnable {
 	@Override
 	public void run() {
 		try {
-			MainActivity.isready[4]=false;
-			ExcelProcessor.appendDataQuickly(Condition.PRE_ALT_EXCEL, pressureSensorDatas,length);
-			MainActivity.isready[4]= true;
+			ExcelProcessor.appendDataQuickly(Condition.getPreAltExcel(), pressureSensorDatas,length);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

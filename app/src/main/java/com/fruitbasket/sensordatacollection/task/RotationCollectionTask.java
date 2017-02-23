@@ -20,9 +20,7 @@ public class RotationCollectionTask implements Runnable {
 	@Override
 	public void run() {
 		try {
-			MainActivity.isready[5]=false;
-			ExcelProcessor.appendDataQuickly(Condition.ROTATION_EXCEL, rotationSensorDatas,length);
-			MainActivity.isready[5]=true;
+			ExcelProcessor.appendDataQuickly(Condition.getRotationExcel(), rotationSensorDatas,length);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -47,7 +48,83 @@
         android:layout_gravity="left"
         android:textSize="18sp"
         android:textColor="@android:color/black"
-        android:text="v-2.1.0"
+        android:text="v 2.2.0"
         android:layout_weight="1"/>
     </LinearLayout>
- </LinearLayout>
+ </LinearLayout>-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_sensors"/>
+
+    <CheckBox
+        android:id="@+id/check_box_acc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/acceleration_sensor"
+        android:checked="true"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/check_box_gyr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gyroscope"
+        android:checked="true"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/check_box_mag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/magnetometer"
+        android:checked="true"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/check_box_pressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pressure_sensor"
+        android:checked="true"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/check_box_rotation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rotating_vector_sensor"
+        android:checked="true"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/check_box_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/temperature_sensor"
+        android:checked="true"></CheckBox>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/begin_collecting"/>
+
+        <ToggleButton
+            android:id="@+id/toggle_button_begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt"/>
+
+</LinearLayout>

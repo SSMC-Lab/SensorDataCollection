@@ -20,9 +20,7 @@ public class GyrCollectionTask implements Runnable {
 	@Override
 	public void run() {
 		try {
-			MainActivity.isready[2] = false;
-			ExcelProcessor.appendDataQuickly(Condition.GYR_EXCEL, gyrSensorDatas,length);
-			MainActivity.isready[2] = true;
+			ExcelProcessor.appendDataQuickly(Condition.getGyrExcel(), gyrSensorDatas,length);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

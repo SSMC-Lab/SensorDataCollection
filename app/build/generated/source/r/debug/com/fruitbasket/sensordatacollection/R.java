@@ -63,20 +63,24 @@ containing a value of this type.
         public static final int logoall=0x7f020003;
     }
     public static final class id {
-        public static final int acc_ckbox=0x7f0a0008;
-        public static final int action_settings=0x7f0a000d;
+        public static final int acc_ckbox=0x7f0a000c;
+        public static final int action_settings=0x7f0a0011;
         public static final int adjust_height=0x7f0a0000;
         public static final int adjust_width=0x7f0a0001;
-        public static final int alert_ok=0x7f0a000c;
-        public static final int choose_button=0x7f0a0003;
-        public static final int choose_text=0x7f0a0005;
-        public static final int gyr_ckbox=0x7f0a0009;
-        public static final int mag_ckbox=0x7f0a0006;
+        public static final int alert_ok=0x7f0a0010;
+        public static final int check_box_acc=0x7f0a0003;
+        public static final int check_box_gyr=0x7f0a0004;
+        public static final int check_box_mag=0x7f0a0005;
+        public static final int check_box_pressure=0x7f0a0006;
+        public static final int check_box_rotation=0x7f0a0007;
+        public static final int check_box_temperature=0x7f0a0008;
+        public static final int gyr_ckbox=0x7f0a000d;
+        public static final int mag_ckbox=0x7f0a000a;
         public static final int none=0x7f0a0002;
-        public static final int pre_ckbox=0x7f0a000b;
-        public static final int rot_ckbox=0x7f0a000a;
-        public static final int tem_ckbox=0x7f0a0007;
-        public static final int toggleButton=0x7f0a0004;
+        public static final int pre_ckbox=0x7f0a000f;
+        public static final int rot_ckbox=0x7f0a000e;
+        public static final int tem_ckbox=0x7f0a000b;
+        public static final int toggle_button_begin=0x7f0a0009;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
@@ -89,10 +93,12 @@ containing a value of this type.
         public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_settings=0x7f04001e;
-        public static final int app_name=0x7f04001f;
-        public static final int auth_google_play_services_client_facebook_display_name=0x7f040020;
-        public static final int auth_google_play_services_client_google_display_name=0x7f040021;
+        public static final int acceleration_sensor=0x7f04001e;
+        public static final int action_settings=0x7f04001f;
+        public static final int app_name=0x7f040020;
+        public static final int auth_google_play_services_client_facebook_display_name=0x7f040029;
+        public static final int auth_google_play_services_client_google_display_name=0x7f04002a;
+        public static final int begin_collecting=0x7f040021;
         public static final int common_android_wear_notification_needs_update_text=0x7f040000;
         public static final int common_android_wear_update_text=0x7f040001;
         public static final int common_android_wear_update_title=0x7f040002;
@@ -123,7 +129,13 @@ containing a value of this type.
         public static final int common_google_play_services_updating_text=0x7f04001b;
         public static final int common_google_play_services_updating_title=0x7f04001c;
         public static final int common_open_on_phone=0x7f04001d;
-        public static final int prompt=0x7f040022;
+        public static final int gyroscope=0x7f040022;
+        public static final int magnetometer=0x7f040023;
+        public static final int pressure_sensor=0x7f040024;
+        public static final int prompt=0x7f040025;
+        public static final int rotating_vector_sensor=0x7f040026;
+        public static final int select_sensors=0x7f040027;
+        public static final int temperature_sensor=0x7f040028;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

@@ -6,42 +6,42 @@
     <CheckBox
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:checked="false"
+    android:checked="true"
     android:text="磁力传感器"
     android:id="@+id/mag_ckbox"
     />
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:checked="false"
+        android:checked="true"
         android:text="温度传感器"
         android:id="@+id/tem_ckbox"
         />
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:checked="false"
+        android:checked="true"
         android:text="加速度传感器"
         android:id="@+id/acc_ckbox"
         />
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:checked="false"
+        android:checked="true"
         android:text="陀螺仪传感器"
         android:id="@+id/gyr_ckbox"
         />
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:checked="false"
+        android:checked="true"
         android:text="旋转矢量传感器"
         android:id="@+id/rot_ckbox"
         />
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:checked="false"
+        android:checked="true"
         android:text="压力传感器"
         android:id="@+id/pre_ckbox"
         />

@@ -1,30 +1,6 @@
 [
     {
-        "outputFile": "C:\\algorithm\\Demo1\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 58,
-                    "endOffset": 109
-                },
-                "from": {
-                    "file": "C:\\algorithm\\Demo1\\SensorDataCollection\\app\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 206,
-                        "endColumn": 58,
-                        "endOffset": 260
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {

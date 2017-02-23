@@ -21,11 +21,14 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
-public class DataCollectionService extends Service {
+import static com.fruitbasket.sensordatacollection.utilities.Utilities.createDataFile;
 
+public class DataCollectionService extends Service {
 	private static final String TAG="DataCollectionService";
-	
+
+	private boolean chooseSensor[];
 	private SensorManager mSensorManager;
+
 	private SensorEventListener mySensorListener;
 	private ExecutorService accExecutor;
 	private ExecutorService gyrExecutor;
@@ -61,90 +64,82 @@ public class DataCollectionService extends Service {
 		mySensorListener = new mySensorListener();
 
 		int i;
-		if(MainActivity.chooseSensor[1]) {
 			accSensorDatas = new AccSensor[Condition.FAST_FLUSH_INTERVAL];
 			for (i = 0; i < accSensorDatas.length; ++i) {
 				accSensorDatas[i] = new AccSensor();
 			}
 			accExecutor = Executors.newSingleThreadExecutor();
-		}
 
-		if(MainActivity.chooseSensor[2]) {
+
 			gyrSensorDatas = new GyrSensor[Condition.FAST_FLUSH_INTERVAL];
 			for (i = 0; i < gyrSensorDatas.length; ++i) {
 				gyrSensorDatas[i] = new GyrSensor();
 			}
 			gyrExecutor = Executors.newSingleThreadExecutor();
-		}
 
-		if(MainActivity.chooseSensor[3]) {
 			magsSensorDatas = new MagsSensor[Condition.MID_FLUSH_INTERVAL];
 			for (i = 0; i < magsSensorDatas.length; ++i) {
 				magsSensorDatas[i] = new MagsSensor();
 			}
 			magsExecutor = Executors.newSingleThreadExecutor();
-		}
-
-		if(MainActivity.chooseSensor[4]) {
 
 			pressureSensorDatas = new PressureSensor[Condition.MID_FLUSH_INTERVAL];
 			for (i = 0; i < pressureSensorDatas.length; ++i) {
 				pressureSensorDatas[i] = new PressureSensor();
 			}
 			pressureExecutor = Executors.newSingleThreadExecutor();
-		}
 
-		if(MainActivity.chooseSensor[5]) {
 			rotationSensorDatas = new RotationSensor[Condition.MID_FLUSH_INTERVAL];
 			for (i = 0; i < rotationSensorDatas.length; ++i) {
 				rotationSensorDatas[i] = new RotationSensor();
 			}
 			rotationExecutor = Executors.newSingleThreadExecutor();
-		}
 
-		if(MainActivity.chooseSensor[6]) {
 			temperatureSensorDatas = new TemperatureSensor[Condition.SLOW_FLUSH_INTERVAL];
 			for (i = 0; i < temperatureSensorDatas.length; ++i) {
 				temperatureSensorDatas[i] = new TemperatureSensor();
 			}
 			temperatureExecutor = Executors.newSingleThreadExecutor();
-		}
+
+		Utilities.createDataFile();
 		registerListeners();
 	}
 	
 	@Override
 	public void onDestroy(){
 		unregisterListeners();
-		if(MainActivity.chooseSensor[1]) {
+		///if(chooseSensor[MainActivity.INDEX_ACC]) {
 			accExecutor.execute(new AccCollectionTask(accSensorDatas, accLength));
 			accLength = 0;
 			accExecutor.shutdown();
-		}
-		if(MainActivity.chooseSensor[2]) {
+		///}
+		///if(chooseSensor[MainActivity.INDEX_GYR]) {
 			gyrExecutor.execute(new GyrCollectionTask(gyrSensorDatas, gyrLength));
 			gyrLength = 0;
 			gyrExecutor.shutdown();
-		}
-		if(MainActivity.chooseSensor[3]) {
+		///}
+		///if(chooseSensor[MainActivity.INDEX_MAG]) {
 			magsExecutor.execute(new MagsCollectionTask(magsSensorDatas, magsLength));
 			magsLength = 0;
 			magsExecutor.shutdown();
-		}
-		if(MainActivity.chooseSensor[4]) {
+		///}
+		///if(chooseSensor[MainActivity.INDEX_PRESSURE]) {
 			pressureExecutor.execute(new PressureCollectionTask(pressureSensorDatas, pressureLength));
 			pressureLength = 0;
 			pressureExecutor.shutdown();
-		}
-		if(MainActivity.chooseSensor[5]) {
+		///}
+		///if(chooseSensor[MainActivity.INDEX_ROTATION]) {
 			rotationExecutor.execute(new RotationCollectionTask(rotationSensorDatas, rotationLength));
 			rotationLength = 0;
 			rotationExecutor.shutdown();
-		}
-		if(MainActivity.chooseSensor[6]) {
+		///}
+		///if(chooseSensor[MainActivity.INDEX_TEMPERATURE]) {
 			temperatureExecutor.execute(new TemperatureCollectionTask(temperatureSensorDatas, temperatureLength));
 			temperatureLength = 0;
 			temperatureExecutor.shutdown();
-		}
+		///}
+
+		
 
 		Log.d(TAG,"onDestroy()");
 		super.onDestroy();
@@ -156,40 +151,49 @@ public class DataCollectionService extends Service {
 		return new MyBinder();
 	}
 	
-	private void registerListeners() {
-		if(MainActivity.chooseSensor[4])
-		mSensorManager.registerListener(mySensorListener,
-				mSensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE),
-				SensorManager.SENSOR_DELAY_FASTEST);
-		if(MainActivity.chooseSensor[1])
+	private void registerListeners() {///private
+		Log.i(TAG,"registerListeners()");
+
+		///if(chooseSensor[MainActivity.INDEX_ACC])
 		mSensorManager.registerListener(mySensorListener,
 				mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION),
 				SensorManager.SENSOR_DELAY_FASTEST);
-		if(MainActivity.chooseSensor[3])
+
+		///if(chooseSensor[MainActivity.INDEX_GYR])
+			mSensorManager.registerListener(mySensorListener,
+					mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE),
+					SensorManager.SENSOR_DELAY_FASTEST);
+
+		///if(chooseSensor[MainActivity.INDEX_MAG])
 		mSensorManager.registerListener(mySensorListener,
 				mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),
 				SensorManager.SENSOR_DELAY_FASTEST);
-		if(MainActivity.chooseSensor[2])
+
+		///if(chooseSensor[MainActivity.INDEX_PRESSURE])
 			mSensorManager.registerListener(mySensorListener,
-				mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE),
-				SensorManager.SENSOR_DELAY_FASTEST);
-		if(MainActivity.chooseSensor[6])
-			mSensorManager.registerListener(mySensorListener, mSensorManager
-				.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE),
-				SensorManager.SENSOR_DELAY_FASTEST);
-		if(MainActivity.chooseSensor[5])
+					mSensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE),
+					SensorManager.SENSOR_DELAY_FASTEST);
+
+		///if(chooseSensor[MainActivity.INDEX_ROTATION])
 		mSensorManager.registerListener(mySensorListener,
 				mSensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR),
 				SensorManager.SENSOR_DELAY_FASTEST);
+
+		///if(chooseSensor[MainActivity.INDEX_TEMPERATURE])
+			mSensorManager.registerListener(mySensorListener, mSensorManager
+							.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE),
+					SensorManager.SENSOR_DELAY_FASTEST);
 	}
 	
 	private void unregisterListeners(){
 		mSensorManager.unregisterListener(mySensorListener);
 	}
-	
-	
-	
-	
+
+	public void setChooseSensor(boolean chooseSensor[]){
+		this.chooseSensor=chooseSensor;
+	}
+
+
 	
 	class MyBinder extends Binder{
 		DataCollectionService getService(){
@@ -197,7 +201,7 @@ public class DataCollectionService extends Service {
 		}
 	}
 
-	class mySensorListener implements SensorEventListener{
+	private class mySensorListener implements SensorEventListener{
 
 		@Override
 		public void onAccuracyChanged(Sensor arg0, int arg1) {}

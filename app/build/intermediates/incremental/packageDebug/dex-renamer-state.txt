@@ -1,0 +1,7 @@
+#Thu Feb 23 16:14:26 CST 2017
+base.0=E\:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_fc7b68e532324f6262f819315bf7d1da1ab75833
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=E\:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_461ec2c3fa2203fa06fa8d45933094e683102e89\\classes.dex
+base.1=E\:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_461ec2c3fa2203fa06fa8d45933094e683102e89
+file.0=E\:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_fc7b68e532324f6262f819315bf7d1da1ab75833\\classes.dex

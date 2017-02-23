@@ -1,5 +1,6 @@
 package com.fruitbasket.sensordatacollection;
 
+import java.io.File;
 import java.io.IOException;
 
 import com.fruitbasket.sensordatacollection.utilities.ExcelProcessor;
@@ -22,9 +23,13 @@ public class MyApp extends Application {
 		super.onCreate();
 		Log.d(TAG,"onCreate()");
 		//Toast.makeText(this, TAG, Toast.LENGTH_SHORT).show();
-		Utilities.createDirs(Condition.DATA_DIR);
+
+		File appDir=new File(Condition.APP_FILE_DIR);
+		if(appDir.exists()==false){
+			appDir.mkdirs();
+		}
 		
-		String [] dataLine;
+		/*String [] dataLine;
 		try {
 			if(Condition.PRE_ALT_EXCEL.exists()==false){
 				dataLine=new String[]{"Time","Pressure","Altitude"};
@@ -52,6 +57,6 @@ public class MyApp extends Application {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 }

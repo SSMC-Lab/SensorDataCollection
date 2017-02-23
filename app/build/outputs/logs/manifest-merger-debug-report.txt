@@ -6,7 +6,7 @@ ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\s
 		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
 		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:5:5-30
+		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:5:5-32
 		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
 		INJECTED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml
 	android:versionCode
@@ -17,7 +17,6 @@ ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\s
 		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:22.2.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:support-v4:22.2.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
@@ -35,7 +34,6 @@ ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\s
 		ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:10:22-78
 application
 ADDED from E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\src\main\AndroidManifest.xml:12:5-33:19
-MERGED from [com.android.support:support-v4:22.2.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.1.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:22.2.0] E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20

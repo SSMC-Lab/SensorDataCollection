@@ -20,9 +20,7 @@ public class TemperatureCollectionTask implements Runnable {
 	@Override
 	public void run() {
 		try {
-			MainActivity.isready[6]=false;
-			ExcelProcessor.appendDataQuickly(Condition.TEMPERATURE_EXCEL, temperatureSensorDatas,length);
-			MainActivity.isready[6]=true;
+			ExcelProcessor.appendDataQuickly(Condition.getTemperatureExcel(), temperatureSensorDatas,length);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

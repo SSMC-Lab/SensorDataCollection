@@ -1,13 +1,5 @@
 [
     {
-        "merged": "C:\\algorithm\\Demo1\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
-        "source": "C:\\algorithm\\Demo1\\SensorDataCollection\\app\\src\\main\\res\\drawable\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\algorithm\\Demo1\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logoall.png",
-        "source": "C:\\algorithm\\Demo1\\SensorDataCollection\\app\\src\\main\\res\\drawable\\logoall.png"
-    },
-    {
         "merged": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\logoall.png",
         "source": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\drawable\\logoall.png"
     },
