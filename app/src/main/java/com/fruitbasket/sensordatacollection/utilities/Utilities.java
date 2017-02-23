@@ -122,28 +122,5 @@ public class Utilities {
 	public static String getTime(){
 		return new SimpleDateFormat("HH:mm:ss:SSS").format(new Date());
 	}
-	
-	
-	/**
-	 * @param context
-	 * @param className
-	 * @return
-	 */
-	public static boolean isServiceRunning(Context context, String className) {
-		boolean isRunning = false;
-		ActivityManager activityManager = (ActivityManager) context
-				.getSystemService(Context.ACTIVITY_SERVICE);
-		List<ActivityManager.RunningServiceInfo> serviceList = activityManager
-				.getRunningServices(30);
-		if (!(serviceList.size() > 0)) {
-			return false;
-		}
-		for (int i = 0; i < serviceList.size(); i++) {
-			if (serviceList.get(i).service.getClassName().equals(className) == true) {
-				isRunning = true;
-				break;
-			}
-		}
-		return isRunning;
-	}
+
 }

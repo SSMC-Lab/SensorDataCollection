@@ -1,6 +1,7 @@
 package com.fruitbasket.sensordatacollection;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import com.fruitbasket.sensordatacollection.sensor.AccSensor;
 import com.fruitbasket.sensordatacollection.sensor.GyrSensor;
@@ -11,6 +12,7 @@ import com.fruitbasket.sensordatacollection.sensor.TemperatureSensor;
 import com.fruitbasket.sensordatacollection.task.*;
 import com.fruitbasket.sensordatacollection.utilities.Utilities;
 
+import android.app.ProgressDialog;
 import android.app.Service;
 import android.content.Intent;
 import android.hardware.Sensor;
@@ -20,6 +22,7 @@ import android.hardware.SensorManager;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.Toast;
 
 import static com.fruitbasket.sensordatacollection.utilities.Utilities.createDataFile;
 
@@ -64,42 +67,43 @@ public class DataCollectionService extends Service {
 		mySensorListener = new mySensorListener();
 
 		int i;
-			accSensorDatas = new AccSensor[Condition.FAST_FLUSH_INTERVAL];
-			for (i = 0; i < accSensorDatas.length; ++i) {
-				accSensorDatas[i] = new AccSensor();
-			}
-			accExecutor = Executors.newSingleThreadExecutor();
+		///这里应该根据用户的选择来创建对应的数据
+		accSensorDatas = new AccSensor[Condition.FAST_FLUSH_INTERVAL];
+		for (i = 0; i < accSensorDatas.length; ++i) {
+			accSensorDatas[i] = new AccSensor();
+		}
+		accExecutor = Executors.newSingleThreadExecutor();
 
 
-			gyrSensorDatas = new GyrSensor[Condition.FAST_FLUSH_INTERVAL];
-			for (i = 0; i < gyrSensorDatas.length; ++i) {
-				gyrSensorDatas[i] = new GyrSensor();
-			}
-			gyrExecutor = Executors.newSingleThreadExecutor();
+		gyrSensorDatas = new GyrSensor[Condition.FAST_FLUSH_INTERVAL];
+		for (i = 0; i < gyrSensorDatas.length; ++i) {
+			gyrSensorDatas[i] = new GyrSensor();
+		}
+		gyrExecutor = Executors.newSingleThreadExecutor();
 
-			magsSensorDatas = new MagsSensor[Condition.MID_FLUSH_INTERVAL];
-			for (i = 0; i < magsSensorDatas.length; ++i) {
-				magsSensorDatas[i] = new MagsSensor();
-			}
-			magsExecutor = Executors.newSingleThreadExecutor();
+		magsSensorDatas = new MagsSensor[Condition.MID_FLUSH_INTERVAL];
+		for (i = 0; i < magsSensorDatas.length; ++i) {
+			magsSensorDatas[i] = new MagsSensor();
+		}
+		magsExecutor = Executors.newSingleThreadExecutor();
 
-			pressureSensorDatas = new PressureSensor[Condition.MID_FLUSH_INTERVAL];
-			for (i = 0; i < pressureSensorDatas.length; ++i) {
-				pressureSensorDatas[i] = new PressureSensor();
-			}
-			pressureExecutor = Executors.newSingleThreadExecutor();
+		pressureSensorDatas = new PressureSensor[Condition.MID_FLUSH_INTERVAL];
+		for (i = 0; i < pressureSensorDatas.length; ++i) {
+			pressureSensorDatas[i] = new PressureSensor();
+		}
+		pressureExecutor = Executors.newSingleThreadExecutor();
 
-			rotationSensorDatas = new RotationSensor[Condition.MID_FLUSH_INTERVAL];
-			for (i = 0; i < rotationSensorDatas.length; ++i) {
-				rotationSensorDatas[i] = new RotationSensor();
-			}
-			rotationExecutor = Executors.newSingleThreadExecutor();
+		rotationSensorDatas = new RotationSensor[Condition.MID_FLUSH_INTERVAL];
+		for (i = 0; i < rotationSensorDatas.length; ++i) {
+			rotationSensorDatas[i] = new RotationSensor();
+		}
+		rotationExecutor = Executors.newSingleThreadExecutor();
 
-			temperatureSensorDatas = new TemperatureSensor[Condition.SLOW_FLUSH_INTERVAL];
-			for (i = 0; i < temperatureSensorDatas.length; ++i) {
-				temperatureSensorDatas[i] = new TemperatureSensor();
-			}
-			temperatureExecutor = Executors.newSingleThreadExecutor();
+		temperatureSensorDatas = new TemperatureSensor[Condition.SLOW_FLUSH_INTERVAL];
+		for (i = 0; i < temperatureSensorDatas.length; ++i) {
+			temperatureSensorDatas[i] = new TemperatureSensor();
+		}
+		temperatureExecutor = Executors.newSingleThreadExecutor();
 
 		Utilities.createDataFile();
 		registerListeners();
@@ -107,6 +111,7 @@ public class DataCollectionService extends Service {
 	
 	@Override
 	public void onDestroy(){
+		Log.d(TAG,"onDestroy()");
 		unregisterListeners();
 		///if(chooseSensor[MainActivity.INDEX_ACC]) {
 			accExecutor.execute(new AccCollectionTask(accSensorDatas, accLength));
@@ -139,9 +144,26 @@ public class DataCollectionService extends Service {
 			temperatureExecutor.shutdown();
 		///}
 
-		
+		new Thread(){
+			@Override
+			public void run(){
+				try {
+					if(accExecutor.awaitTermination(10, TimeUnit.SECONDS)&&
+							gyrExecutor.awaitTermination(10,TimeUnit.SECONDS)&&
+							magsExecutor.awaitTermination(10,TimeUnit.SECONDS)&&
+							pressureExecutor.awaitTermination(10,TimeUnit.SECONDS)&&
+							rotationExecutor.awaitTermination(10,TimeUnit.SECONDS)&&
+							temperatureExecutor.awaitTermination(10,TimeUnit.SECONDS)){
 
-		Log.d(TAG,"onDestroy()");
+						Log.i(TAG,"data saved");
+
+					}
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}.start();
+
 		super.onDestroy();
 	}
 	

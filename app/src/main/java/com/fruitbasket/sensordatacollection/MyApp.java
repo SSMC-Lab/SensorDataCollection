@@ -22,41 +22,10 @@ public class MyApp extends Application {
 	public void onCreate(){
 		super.onCreate();
 		Log.d(TAG,"onCreate()");
-		//Toast.makeText(this, TAG, Toast.LENGTH_SHORT).show();
 
 		File appDir=new File(Condition.APP_FILE_DIR);
 		if(appDir.exists()==false){
 			appDir.mkdirs();
 		}
-		
-		/*String [] dataLine;
-		try {
-			if(Condition.PRE_ALT_EXCEL.exists()==false){
-				dataLine=new String[]{"Time","Pressure","Altitude"};
-				ExcelProcessor.createFileWithHeader(Condition.PRE_ALT_EXCEL,dataLine);
-			}
-			if(Condition.TEMPERATURE_EXCEL.exists()==false){
-				dataLine=new String[]{"Time","Temperature"};
-				ExcelProcessor.createFileWithHeader(Condition.TEMPERATURE_EXCEL,dataLine);
-			}
-			if(Condition.ROTATION_EXCEL.exists()==false){
-				dataLine=new String[]{"Time","Pitch(x)","Roll(y)","Azimuth(z)"};
-				ExcelProcessor.createFileWithHeader(Condition.ROTATION_EXCEL,dataLine);
-			}
-			if(Condition.ACC_EXCEL.exists()==false){
-				dataLine=new String[]{"Time","accX","accY","accZ"};
-				ExcelProcessor.createFileWithHeader(Condition.ACC_EXCEL,dataLine);
-			}
-			if(Condition.GYR_EXCEL.exists()==false){
-				dataLine=new String[]{"Time","gyrX","gyrY","gyrZ"};
-				ExcelProcessor.createFileWithHeader(Condition.GYR_EXCEL,dataLine);
-			}
-			if(Condition.MAGS_EXCEL.exists()==false){
-				dataLine=new String[]{"Time","magX","magY","magZ"};
-				ExcelProcessor.createFileWithHeader(Condition.MAGS_EXCEL,dataLine);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}*/
 	}
 }
