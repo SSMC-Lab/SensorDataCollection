@@ -59,6 +59,7 @@
     <string name="pressure_sensor">pressure sensor</string>
     <string name="prompt">the data will be save in directory "/SensorDatas"</string>
     <string name="rotating_vector_sensor">rotating vector sensor</string>
+    <string name="save_data_prompt">saving data, do not close</string>
     <string name="select_sensors">select sensors : </string>
     <string name="temperature_sensor">temperature sensor</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">

@@ -96,8 +96,8 @@ containing a value of this type.
         public static final int acceleration_sensor=0x7f04001e;
         public static final int action_settings=0x7f04001f;
         public static final int app_name=0x7f040020;
-        public static final int auth_google_play_services_client_facebook_display_name=0x7f040029;
-        public static final int auth_google_play_services_client_google_display_name=0x7f04002a;
+        public static final int auth_google_play_services_client_facebook_display_name=0x7f04002a;
+        public static final int auth_google_play_services_client_google_display_name=0x7f04002b;
         public static final int begin_collecting=0x7f040021;
         public static final int common_android_wear_notification_needs_update_text=0x7f040000;
         public static final int common_android_wear_update_text=0x7f040001;
@@ -134,8 +134,9 @@ containing a value of this type.
         public static final int pressure_sensor=0x7f040024;
         public static final int prompt=0x7f040025;
         public static final int rotating_vector_sensor=0x7f040026;
-        public static final int select_sensors=0x7f040027;
-        public static final int temperature_sensor=0x7f040028;
+        public static final int save_data_prompt=0x7f040027;
+        public static final int select_sensors=0x7f040028;
+        public static final int temperature_sensor=0x7f040029;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

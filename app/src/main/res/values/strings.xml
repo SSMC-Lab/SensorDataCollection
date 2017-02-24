@@ -13,4 +13,6 @@
     <string name="begin_collecting">begin collecting : </string>
     <string name="prompt">the data will be save in directory "/SensorDatas"</string>
 
+    <string name="save_data_prompt">saving data, do not close</string>
+
 </resources>

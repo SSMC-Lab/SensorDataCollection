@@ -11,6 +11,7 @@ import android.content.Context;
 import android.util.Log;
 
 import com.fruitbasket.sensordatacollection.Condition;
+import com.fruitbasket.sensordatacollection.MainActivity;
 
 import static com.fruitbasket.sensordatacollection.Condition.APP_FILE_DIR;
 
@@ -28,8 +29,11 @@ public class Utilities {
 	/**
 	 *
 	 */
-	public static final boolean createDataFile(){
+	public static final boolean createDataFile(boolean[] chooseSensor){
 		Log.i(TAG,"createDataFile()");
+		if(chooseSensor==null || chooseSensor.length!= MainActivity.NUMBER_SENSOR){
+			return false;
+		}
 
 		File appFileDir=new File(APP_FILE_DIR);
 		if(appFileDir.exists()==false||appFileDir.isDirectory()==false){
@@ -67,47 +71,59 @@ public class Utilities {
 		try {
 			String[] dataLine;
 
-			Condition.setPreAltExcel(new File(subDir+"/"+ Condition.PRE_ALT_FILENAME));
-			Log.i(TAG,"the path is : "+subDir+"/"+ Condition.PRE_ALT_FILENAME);
-			if(Condition.getPreAltExcel().exists()==false){
-				Log.i(TAG,"Condition.getPreAltExcel().exists()==false");
-				dataLine=new String[]{"Time","Pressure","Altitude"};
-				ExcelProcessor.createFileWithHeader(Condition.getPreAltExcel(),dataLine);
+			if(chooseSensor[MainActivity.INDEX_PRESSURE]){
+				Condition.setPreAltExcel(new File(subDir+"/"+ Condition.PRE_ALT_FILENAME));
+				Log.i(TAG,"the path is : "+subDir+"/"+ Condition.PRE_ALT_FILENAME);
+				if(Condition.getPreAltExcel().exists()==false){
+					Log.i(TAG,"Condition.getPreAltExcel().exists()==false");
+					dataLine=new String[]{"Time","Pressure","Altitude"};
+					ExcelProcessor.createFileWithHeader(Condition.getPreAltExcel(),dataLine);
+				}
 			}
 
-			Condition.setTemperatureExcel(new File(subDir+"/"+Condition.TEMPERATURE_FILENAME));
-			if(Condition.getTemperatureExcel().exists()==false){
-				Log.i(TAG,"Condition.getTemperatureExcel().exists()==false");
-				dataLine=new String[]{"Time","Temperature"};
-				ExcelProcessor.createFileWithHeader(Condition.getTemperatureExcel(),dataLine);
+			if(chooseSensor[MainActivity.INDEX_TEMPERATURE]){
+				Condition.setTemperatureExcel(new File(subDir+"/"+Condition.TEMPERATURE_FILENAME));
+				if(Condition.getTemperatureExcel().exists()==false){
+					Log.i(TAG,"Condition.getTemperatureExcel().exists()==false");
+					dataLine=new String[]{"Time","Temperature"};
+					ExcelProcessor.createFileWithHeader(Condition.getTemperatureExcel(),dataLine);
+				}
 			}
 
-			Condition.setRotationExcel(new File(subDir+"/"+Condition.ROTATION_FILENAME));
-			if(Condition.getRotationExcel().exists()==false){
-				Log.i(TAG,"Condition.getRotationExcel().exists()==false");
-				dataLine=new String[]{"Time","Pitch(x)","Roll(y)","Azimuth(z)"};
-				ExcelProcessor.createFileWithHeader(Condition.getRotationExcel(),dataLine);
+			if(chooseSensor[MainActivity.INDEX_ROTATION]){
+				Condition.setRotationExcel(new File(subDir+"/"+Condition.ROTATION_FILENAME));
+				if(Condition.getRotationExcel().exists()==false){
+					Log.i(TAG,"Condition.getRotationExcel().exists()==false");
+					dataLine=new String[]{"Time","Pitch(x)","Roll(y)","Azimuth(z)"};
+					ExcelProcessor.createFileWithHeader(Condition.getRotationExcel(),dataLine);
+				}
 			}
 
-			Condition.setAccExcel(new File(subDir+"/"+Condition.ACC_FILENAME));
-			if(Condition.getAccExcel().exists()==false){
-				Log.i(TAG,"Condition.getAccExcel().exists()==false");
-				dataLine=new String[]{"Time","accX","accY","accZ"};
-				ExcelProcessor.createFileWithHeader(Condition.getAccExcel(),dataLine);
+			if(chooseSensor[MainActivity.INDEX_ACC]){
+				Condition.setAccExcel(new File(subDir+"/"+Condition.ACC_FILENAME));
+				if(Condition.getAccExcel().exists()==false){
+					Log.i(TAG,"Condition.getAccExcel().exists()==false");
+					dataLine=new String[]{"Time","accX","accY","accZ"};
+					ExcelProcessor.createFileWithHeader(Condition.getAccExcel(),dataLine);
+				}
 			}
 
-			Condition.setGyrExcel(new File(subDir+"/"+Condition.GYR_FILENAME));
-			if(Condition.getGyrExcel().exists()==false){
-				Log.i(TAG,"Condition.getGyrExcel().exists()==false");
-				dataLine=new String[]{"Time","gyrX","gyrY","gyrZ"};
-				ExcelProcessor.createFileWithHeader(Condition.getGyrExcel(),dataLine);
+			if(chooseSensor[MainActivity.INDEX_GYR]){
+				Condition.setGyrExcel(new File(subDir+"/"+Condition.GYR_FILENAME));
+				if(Condition.getGyrExcel().exists()==false){
+					Log.i(TAG,"Condition.getGyrExcel().exists()==false");
+					dataLine=new String[]{"Time","gyrX","gyrY","gyrZ"};
+					ExcelProcessor.createFileWithHeader(Condition.getGyrExcel(),dataLine);
+				}
 			}
 
-			Condition.setMagsExcel(new File(subDir+"/"+Condition.MAGS_FILENAME));
-			if(Condition.getMagsExcel().exists()==false){
-				Log.i(TAG,"Condition.getMagsExcel().exists()==false");
-				dataLine=new String[]{"Time","magX","magY","magZ"};
-				ExcelProcessor.createFileWithHeader(Condition.getMagsExcel(),dataLine);
+			if(chooseSensor[MainActivity.INDEX_MAG]){
+				Condition.setMagsExcel(new File(subDir+"/"+Condition.MAGS_FILENAME));
+				if(Condition.getMagsExcel().exists()==false){
+					Log.i(TAG,"Condition.getMagsExcel().exists()==false");
+					dataLine=new String[]{"Time","magX","magY","magZ"};
+					ExcelProcessor.createFileWithHeader(Condition.getMagsExcel(),dataLine);
+				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

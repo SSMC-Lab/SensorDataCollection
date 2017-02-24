@@ -39,6 +39,7 @@
     <string name="pressure_sensor">气压传感器</string>
     <string name="prompt">数据将会存放在根目录下的SensorData文件夹中</string>
     <string name="rotating_vector_sensor">旋转矢量传感器</string>
+    <string name="save_data_prompt">正在保存数据，请不要退出</string>
     <string name="select_sensors">选择传感器：</string>
     <string name="temperature_sensor">温度计</string>
 </resources>

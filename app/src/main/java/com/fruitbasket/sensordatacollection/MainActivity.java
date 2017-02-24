@@ -19,7 +19,6 @@ import android.widget.CheckBox;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import com.google.android.gms.appindexing.Action;
 
 public class MainActivity extends Activity {
     private static final String TAG = "MainActivity";
@@ -42,9 +41,9 @@ public class MainActivity extends Activity {
     private CheckBox check_box_temperature;
     private ToggleButton toggle_button_begin;
 
+    private DataCollectionService.MyBinder binder ;
+    private Handler handler=new MyHandler();
     private Intent dcServiceIntent;
-
-
 
     private ServiceConnection serviceConnection = new ServiceConnection() {
 
@@ -52,8 +51,10 @@ public class MainActivity extends Activity {
         public void onServiceConnected(ComponentName name, IBinder binder) {
             Log.d(TAG, "ServiceConnection.onServiceConnection()");
             isBinded = true;
-            ///DataCollectionService dcService=((DataCollectionService.MyBinder)binder).getService();
-            ///dcService.setChooseSensor(chooseSensor);
+            MainActivity.this.binder=(DataCollectionService.MyBinder)binder;
+            MainActivity.this.binder.setHandler(handler);
+            MainActivity.this.binder.setChooseSensor(chooseSensor);
+            MainActivity.this.binder.beginDataCollecting();
         }
 
         @Override
@@ -66,19 +67,6 @@ public class MainActivity extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-
-
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app URL is correct.
-                Uri.parse("android-app://com.fruitbasket.sensordatacollection/http/host/path")
-        );
-
     }
 
     @Override
@@ -93,26 +81,12 @@ public class MainActivity extends Activity {
     @Override
     public void onStop() {
         super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app URL is correct.
-                Uri.parse("android-app://com.fruitbasket.sensordatacollection/http/host/path")
-        );
-
     }
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
         Log.d(TAG, "onDestroy()");
+        super.onDestroy();
     }
 
     private void initViews() {
@@ -133,6 +107,7 @@ public class MainActivity extends Activity {
                 check_box_pressure!=null&&
                 check_box_rotation!=null&&
                 check_box_temperature!=null){
+
             chooseSensor[INDEX_ACC]=check_box_acc.isChecked();
             chooseSensor[INDEX_GYR]=check_box_gyr.isChecked();
             chooseSensor[INDEX_MAG]=check_box_mag.isChecked();
@@ -182,11 +157,19 @@ public class MainActivity extends Activity {
 
         @Override
         public void handleMessage(Message msg){
+
             if(msg.what==Condition.BEGIN_SAVE_DATA){
-                progressDialog
+                progressDialog = new ProgressDialog(MainActivity.this);
+                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                progressDialog.setCancelable(false);// 设置是否可以通过点击Back键取消
+                progressDialog.setCanceledOnTouchOutside(false);
+                progressDialog.setTitle(R.string.save_data_prompt);
+                progressDialog.show();
             }
             else if(msg.what==Condition.DATA_SAVED){
-
+                if(progressDialog!=null){
+                    progressDialog.dismiss();
+                }
             }
         }
     }

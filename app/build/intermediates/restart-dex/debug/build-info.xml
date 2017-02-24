@@ -5,22 +5,22 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="105793738033124"
+    timestamp="181009588224391"
     token="-3622014409277865363"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="157" />
+        duration="103" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="24" />
+        duration="19" />
     <task
         name="verifier"
-        duration="3" />
+        duration="1" />
 
     <artifact
         location="E:\StudyResource\Java\AndroidSourceProgram\SensorDataCollection\app\build\outputs\apk\app-debug.apk"

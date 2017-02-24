@@ -13,4 +13,6 @@
     <string name="begin_collecting">开始采集：</string>
     <string name="prompt">数据将会存放在根目录下的SensorData文件夹中</string>
 
+    <string name="save_data_prompt">正在保存数据，请不要退出</string>
+
 </resources>

@@ -44,8 +44,8 @@ int menu main 0x7f090000
 int string acceleration_sensor 0x7f04001e
 int string action_settings 0x7f04001f
 int string app_name 0x7f040020
-int string auth_google_play_services_client_facebook_display_name 0x7f040029
-int string auth_google_play_services_client_google_display_name 0x7f04002a
+int string auth_google_play_services_client_facebook_display_name 0x7f04002a
+int string auth_google_play_services_client_google_display_name 0x7f04002b
 int string begin_collecting 0x7f040021
 int string common_android_wear_notification_needs_update_text 0x7f040000
 int string common_android_wear_update_text 0x7f040001
@@ -82,8 +82,9 @@ int string magnetometer 0x7f040023
 int string pressure_sensor 0x7f040024
 int string prompt 0x7f040025
 int string rotating_vector_sensor 0x7f040026
-int string select_sensors 0x7f040027
-int string temperature_sensor 0x7f040028
+int string save_data_prompt 0x7f040027
+int string select_sensors 0x7f040028
+int string temperature_sensor 0x7f040029
 int style AppBaseTheme 0x7f060000
 int style AppTheme 0x7f060001
 int[] styleable LoadingImageView { 0x7f010000, 0x7f010001, 0x7f010002 }
