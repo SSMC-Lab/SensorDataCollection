@@ -3,7 +3,6 @@ package com.fruitbasket.sensordatacollection.task;
 import java.io.IOException;
 
 import com.fruitbasket.sensordatacollection.Condition;
-import com.fruitbasket.sensordatacollection.MainActivity;
 import com.fruitbasket.sensordatacollection.sensor.AccSensor;
 import com.fruitbasket.sensordatacollection.utilities.ExcelProcessor;
 

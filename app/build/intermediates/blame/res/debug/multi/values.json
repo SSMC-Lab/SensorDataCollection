@@ -11,7 +11,14 @@
                     "endOffset": 161
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 789,
+                        "endColumn": 60,
+                        "endOffset": 845
+                    }
                 }
             },
             {
@@ -23,7 +30,14 @@
                     "endOffset": 244
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 90,
+                        "endColumn": 82,
+                        "endOffset": 168
+                    }
                 }
             },
             {
@@ -35,7 +49,14 @@
                     "endOffset": 317
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 256,
+                        "endColumn": 72,
+                        "endOffset": 324
+                    }
                 }
             },
             {
@@ -47,7 +68,14 @@
                     "endOffset": 400
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 329,
+                        "endColumn": 82,
+                        "endOffset": 407
+                    }
                 }
             },
             {
@@ -59,7 +87,14 @@
                     "endOffset": 483
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 173,
+                        "endColumn": 82,
+                        "endOffset": 251
+                    }
                 }
             },
             {
@@ -71,7 +106,14 @@
                     "endOffset": 556
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 716,
+                        "endColumn": 72,
+                        "endOffset": 784
+                    }
                 }
             },
             {
@@ -83,7 +125,14 @@
                     "endOffset": 629
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 412,
+                        "endColumn": 72,
+                        "endOffset": 480
+                    }
                 }
             },
             {
@@ -95,7 +144,14 @@
                     "endOffset": 703
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 569,
+                        "endColumn": 73,
+                        "endOffset": 638
+                    }
                 }
             },
             {
@@ -107,7 +163,14 @@
                     "endOffset": 776
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 643,
+                        "endColumn": 72,
+                        "endOffset": 711
+                    }
                 }
             },
             {
@@ -119,7 +182,14 @@
                     "endOffset": 860
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_colors.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 485,
+                        "endColumn": 83,
+                        "endOffset": 564
+                    }
                 }
             },
             {
@@ -131,7 +201,14 @@
                     "endOffset": 1283
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\dimens.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 92,
+                        "endColumn": 57,
+                        "endOffset": 145
+                    }
                 }
             },
             {
@@ -143,7 +220,14 @@
                     "endOffset": 1339
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\dimens.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 151,
+                        "endColumn": 55,
+                        "endOffset": 202
+                    }
                 }
             },
             {
@@ -155,7 +239,14 @@
                     "endOffset": 1406
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\version.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\version.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 66,
+                        "endOffset": 117
+                    }
                 }
             },
             {
@@ -167,7 +258,14 @@
                     "endOffset": 1474
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 234,
+                        "endColumn": 67,
+                        "endOffset": 297
+                    }
                 }
             },
             {
@@ -179,7 +277,14 @@
                     "endOffset": 1527
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 118,
+                        "endColumn": 52,
+                        "endOffset": 166
+                    }
                 }
             },
             {
@@ -191,7 +296,14 @@
                     "endOffset": 1585
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 57,
+                        "endOffset": 112
+                    }
                 }
             },
             {
@@ -203,7 +315,14 @@
                     "endOffset": 1677
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 253,
+                        "endColumn": 91,
+                        "endOffset": 340
+                    }
                 }
             },
             {
@@ -215,7 +334,14 @@
                     "endOffset": 1765
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\auth_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 109,
+                        "endColumn": 87,
+                        "endOffset": 192
+                    }
                 }
             },
             {
@@ -227,7 +353,14 @@
                     "endOffset": 1830
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 610,
+                        "endColumn": 64,
+                        "endOffset": 670
+                    }
                 }
             },
             {
@@ -239,7 +372,14 @@
                     "endOffset": 1987
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 733,
+                        "endColumn": 160,
+                        "endOffset": 889
+                    }
                 }
             },
             {
@@ -251,7 +391,14 @@
                     "endOffset": 2132
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 4602,
+                        "endColumn": 148,
+                        "endOffset": 4746
+                    }
                 }
             },
             {
@@ -263,7 +410,14 @@
                     "endOffset": 2241
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 4026,
+                        "endColumn": 108,
+                        "endOffset": 4130
+                    }
                 }
             },
             {
@@ -275,7 +429,14 @@
                     "endOffset": 2473
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 99,
+                        "startColumn": 4,
+                        "startOffset": 7585,
+                        "endColumn": 235,
+                        "endOffset": 7816
+                    }
                 }
             },
             {
@@ -287,7 +448,14 @@
                     "endOffset": 2599
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 3483,
+                        "endColumn": 125,
+                        "endOffset": 3604
+                    }
                 }
             },
             {
@@ -299,7 +467,14 @@
                     "endOffset": 2780
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 3087,
+                        "endColumn": 184,
+                        "endOffset": 3267
+                    }
                 }
             },
             {
@@ -311,7 +486,14 @@
                     "endOffset": 2905
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 2811,
+                        "endColumn": 124,
+                        "endOffset": 2931
+                    }
                 }
             },
             {
@@ -323,7 +505,14 @@
                     "endOffset": 3044
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1266,
+                        "endColumn": 142,
+                        "endOffset": 1404
+                    }
                 }
             },
             {
@@ -335,7 +524,14 @@
                     "endOffset": 3168
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 2540,
+                        "endColumn": 123,
+                        "endOffset": 2659
+                    }
                 }
             },
             {
@@ -347,7 +543,14 @@
                     "endOffset": 3381
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1843,
+                        "endColumn": 216,
+                        "endOffset": 2055
+                    }
                 }
             },
             {
@@ -359,7 +562,14 @@
                     "endOffset": 3596
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2225,
+                        "endColumn": 218,
+                        "endOffset": 2439
+                    }
                 }
             },
             {
@@ -371,7 +581,14 @@
                     "endOffset": 3719
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1556,
+                        "endColumn": 122,
+                        "endOffset": 1674
+                    }
                 }
             },
             {
@@ -383,7 +600,14 @@
                     "endOffset": 3884
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 80,
+                        "startColumn": 4,
+                        "startOffset": 6084,
+                        "endColumn": 164,
+                        "endOffset": 6244
+                    }
                 }
             },
             {
@@ -395,7 +619,14 @@
                     "endOffset": 3978
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 77,
+                        "startColumn": 4,
+                        "startOffset": 5869,
+                        "endColumn": 93,
+                        "endOffset": 5958
+                    }
                 }
             },
             {
@@ -407,7 +638,14 @@
                     "endOffset": 4115
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1033,
+                        "endColumn": 136,
+                        "endOffset": 1165
+                    }
                 }
             },
             {
@@ -419,7 +657,14 @@
                     "endOffset": 4256
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 74,
+                        "startColumn": 4,
+                        "startOffset": 5611,
+                        "endColumn": 140,
+                        "endOffset": 5747
+                    }
                 }
             },
             {
@@ -431,7 +676,14 @@
                     "endOffset": 4346
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 4,
+                        "startOffset": 5408,
+                        "endColumn": 89,
+                        "endOffset": 5493
+                    }
                 }
             },
             {
@@ -443,7 +695,14 @@
                     "endOffset": 4494
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 449,
+                        "endColumn": 147,
+                        "endOffset": 592
+                    }
                 }
             },
             {
@@ -455,7 +714,14 @@
                     "endOffset": 4597
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 206,
+                        "endColumn": 102,
+                        "endOffset": 304
+                    }
                 }
             },
             {
@@ -467,7 +733,14 @@
                     "endOffset": 4748
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 105,
+                        "startColumn": 4,
+                        "startOffset": 8155,
+                        "endColumn": 150,
+                        "endOffset": 8301
+                    }
                 }
             },
             {
@@ -479,7 +752,14 @@
                     "endOffset": 4840
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 102,
+                        "startColumn": 4,
+                        "startOffset": 7940,
+                        "endColumn": 91,
+                        "endOffset": 8027
+                    }
                 }
             },
             {
@@ -491,7 +771,14 @@
                     "endOffset": 4951
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 84,
+                        "startColumn": 4,
+                        "startOffset": 6385,
+                        "endColumn": 110,
+                        "endOffset": 6491
+                    }
                 }
             },
             {
@@ -503,7 +790,14 @@
                     "endOffset": 5170
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 90,
+                        "startColumn": 4,
+                        "startOffset": 6861,
+                        "endColumn": 222,
+                        "endOffset": 7079
+                    }
                 }
             },
             {
@@ -515,7 +809,14 @@
                     "endOffset": 5265
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 87,
+                        "startColumn": 4,
+                        "startOffset": 6629,
+                        "endColumn": 94,
+                        "endOffset": 6719
+                    }
                 }
             },
             {
@@ -527,7 +828,14 @@
                     "endOffset": 5370
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 93,
+                        "startColumn": 4,
+                        "startOffset": 7178,
+                        "endColumn": 104,
+                        "endOffset": 7278
+                    }
                 }
             },
             {
@@ -539,7 +847,14 @@
                     "endOffset": 5551
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 4,
+                        "startOffset": 4285,
+                        "endColumn": 184,
+                        "endOffset": 4465
+                    }
                 }
             },
             {
@@ -551,7 +866,14 @@
                     "endOffset": 5676
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 48,
+                        "startColumn": 4,
+                        "startOffset": 3755,
+                        "endColumn": 124,
+                        "endOffset": 3875
+                    }
                 }
             },
             {
@@ -563,7 +885,14 @@
                     "endOffset": 5851
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 4,
+                        "startOffset": 5120,
+                        "endColumn": 178,
+                        "endOffset": 5294
+                    }
                 }
             },
             {
@@ -575,7 +904,14 @@
                     "endOffset": 5956
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 4,
+                        "startOffset": 4881,
+                        "endColumn": 104,
+                        "endOffset": 4981
+                    }
                 }
             },
             {
@@ -587,7 +923,14 @@
                     "endOffset": 6019
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.1.0\\res\\values\\common_strings.xml",
+                    "position": {
+                        "startLine": 96,
+                        "startColumn": 4,
+                        "startOffset": 7378,
+                        "endColumn": 62,
+                        "endOffset": 7436
+                    }
                 }
             },
             {
@@ -599,7 +942,14 @@
                     "endOffset": 6067
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 303,
+                        "endColumn": 47,
+                        "endOffset": 346
+                    }
                 }
             },
             {
@@ -611,7 +961,14 @@
                     "endOffset": 6121
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 352,
+                        "endColumn": 53,
+                        "endOffset": 401
+                    }
                 }
             },
             {
@@ -623,7 +980,14 @@
                     "endOffset": 6181
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 407,
+                        "endColumn": 59,
+                        "endOffset": 462
+                    }
                 }
             },
             {
@@ -635,7 +999,14 @@
                     "endOffset": 6266
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 676,
+                        "endColumn": 84,
+                        "endOffset": 756
+                    }
                 }
             },
             {
@@ -647,7 +1018,14 @@
                     "endOffset": 6340
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 468,
+                        "endColumn": 73,
+                        "endOffset": 537
+                    }
                 }
             },
             {
@@ -678,7 +1056,14 @@
                     "endOffset": 6472
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 172,
+                        "endColumn": 60,
+                        "endOffset": 228
+                    }
                 }
             },
             {
@@ -690,7 +1075,14 @@
                     "endOffset": 6538
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 543,
+                        "endColumn": 65,
+                        "endOffset": 604
+                    }
                 }
             },
             {
@@ -698,25 +1090,41 @@
                     "startLine": 64,
                     "startColumn": 4,
                     "startOffset": 6543,
-                    "endLine": 66,
+                    "endLine": 70,
                     "endColumn": 12,
-                    "endOffset": 6621
+                    "endOffset": 6829
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\styles.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 192,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 484
+                    }
                 }
             },
             {
                 "to": {
-                    "startLine": 67,
+                    "startLine": 71,
                     "startColumn": 4,
-                    "startOffset": 6626,
-                    "endLine": 69,
+                    "startOffset": 6834,
+                    "endLine": 73,
                     "endColumn": 12,
-                    "endOffset": 6693
+                    "endOffset": 6989
                 },
                 "from": {
-                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\styles.xml"
+                    "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 525,
+                        "endLine": 17,
+                        "endColumn": 12,
+                        "endOffset": 682
+                    }
                 }
             }
         ]
