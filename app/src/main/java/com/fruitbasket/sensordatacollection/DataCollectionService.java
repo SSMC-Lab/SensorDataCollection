@@ -1,18 +1,10 @@
 package com.fruitbasket.sensordatacollection;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
-import com.fruitbasket.sensordatacollection.sensor.AccSensor;
-import com.fruitbasket.sensordatacollection.sensor.GyrSensor;
-import com.fruitbasket.sensordatacollection.sensor.MagsSensor;
-import com.fruitbasket.sensordatacollection.sensor.PressureSensor;
-import com.fruitbasket.sensordatacollection.sensor.RotationSensor;
-import com.fruitbasket.sensordatacollection.sensor.TemperatureSensor;
-import com.fruitbasket.sensordatacollection.task.*;
-import com.fruitbasket.sensordatacollection.utilities.Utilities;
-
-import android.app.ProgressDialog;
+import java.io.File;
+import java.util.concurrent.LinkedBlockingQueue;
+import com.fruitbasket.sensordatacollection.data.Data;
+import com.fruitbasket.sensordatacollection.data.DataSaveTask;
+import com.fruitbasket.sensordatacollection.data.PressureData;
 import android.app.Service;
 import android.content.Intent;
 import android.hardware.Sensor;
@@ -22,11 +14,9 @@ import android.hardware.SensorManager;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
-import android.os.Message;
 import android.util.Log;
-import android.widget.Toast;
 
-import static com.fruitbasket.sensordatacollection.utilities.Utilities.createDataFile;
+import static com.fruitbasket.sensordatacollection.Condition.APP_FILE_DIR;
 
 public class DataCollectionService extends Service {
 	private static final String TAG="DataCollectionService";
@@ -36,32 +26,11 @@ public class DataCollectionService extends Service {
 	private Handler handler;
 
 	private SensorEventListener mySensorListener;
-	private ExecutorService accExecutor;
-	private ExecutorService gyrExecutor;
-	private ExecutorService magsExecutor;
-	private ExecutorService pressureExecutor;
-	private ExecutorService rotationExecutor;
-	private ExecutorService temperatureExecutor;
-	
-	private AccSensor[] accSensorDatas;
-	private GyrSensor[] gyrSensorDatas;
-	private MagsSensor[] magsSensorDatas;
-	private PressureSensor[] pressureSensorDatas;
-	private RotationSensor[] rotationSensorDatas;
-	private TemperatureSensor[] temperatureSensorDatas;
-	
-	private int accLength=0;
-	private int gyrLength=0;
-	private int magsLength=0;
-	private int pressureLength=0;
-	private int rotationLength=0;
-	private int temperatureLength=0;
-	
-	//aid data
-	private float[] rotationMatrix=new float[16];
-	private float[] accels=new float[3];
-	private float[] mags=new float[3];
-	
+	private Thread[]  threads;
+	private DataSaveTask[] dataSaveTasks;
+	private LinkedBlockingQueue<Data>[] queues;
+	private String subDir;
+
 	@Override
 	public void onCreate(){
 		super.onCreate();
@@ -87,94 +56,42 @@ public class DataCollectionService extends Service {
 		Log.d(TAG,"onUnbind()");
 		return super.onUnbind(intent);
 	}
-	
+
 	@Override
 	public void onDestroy(){
 		Log.d(TAG,"onDestroy()");
 		unregisterListeners();
-		if(chooseSensor!=null&&chooseSensor.length==MainActivity.NUMBER_SENSOR){
-				if (chooseSensor[MainActivity.INDEX_ACC]) {
-					accExecutor.execute(new AccCollectionTask(accSensorDatas, accLength));
-					accLength = 0;
-					accExecutor.shutdown();
-				}
-				if (chooseSensor[MainActivity.INDEX_GYR]) {
-					gyrExecutor.execute(new GyrCollectionTask(gyrSensorDatas, gyrLength));
-					gyrLength = 0;
-					gyrExecutor.shutdown();
-				}
-				if (chooseSensor[MainActivity.INDEX_MAG]) {
-					magsExecutor.execute(new MagsCollectionTask(magsSensorDatas, magsLength));
-					magsLength = 0;
-					magsExecutor.shutdown();
-				}
-				if (chooseSensor[MainActivity.INDEX_PRESSURE]) {
-					pressureExecutor.execute(new PressureCollectionTask(pressureSensorDatas, pressureLength));
-					pressureLength = 0;
-					pressureExecutor.shutdown();
-				}
-				if (chooseSensor[MainActivity.INDEX_ROTATION]) {
-					rotationExecutor.execute(new RotationCollectionTask(rotationSensorDatas, rotationLength));
-					rotationLength = 0;
-					rotationExecutor.shutdown();
-				}
-				if (chooseSensor[MainActivity.INDEX_TEMPERATURE]) {
-					temperatureExecutor.execute(new TemperatureCollectionTask(temperatureSensorDatas, temperatureLength));
-					temperatureLength = 0;
-					temperatureExecutor.shutdown();
-				}
-		}
-		else{
-			Log.w(TAG,"(chooseSensor!=null&&chooseSensor.length==MainActivity.NUMBER_SENSOR)==false");
-			if(accExecutor!=null){
-
+		Log.i(TAG,"onDestroy(): dataSaveTasks.length=="+dataSaveTasks.length);
+		for(int i=0;i<dataSaveTasks.length;i++){
+			if(dataSaveTasks[i]!=null){
+				Log.i(TAG,"dataSaveTasks["+i+"]!=null");
+				dataSaveTasks[i].stop();
 			}
-			if(gyrExecutor!=null){
-
-			}
-			if(magsExecutor!=null){
-
-			}
-			if(pressureExecutor!=null){
-
-			}
-			if(rotationExecutor!=null){
-
-			}
-			if(temperatureExecutor!=null){
-
+			else{
+				Log.i(TAG,"dataSaveTasks["+i+"]==null");
 			}
 		}
-
+		Log.i(TAG,"onDestroy(): begin waitting data saving");
 		new Thread(){
 			@Override
 			public void run(){
 				if(handler!=null) {
+					Log.i(TAG,"handler!=null");
 					handler.sendEmptyMessage(Condition.BEGIN_SAVE_DATA);
 					try {
-							if(accExecutor!=null){
-								accExecutor.awaitTermination(10, TimeUnit.SECONDS);
+						for (int i = 0; i < threads.length; i++) {
+							if (threads[i] != null) {
+								Log.i(TAG, "threads[" + i + "]!=null");
+								threads[i].join();
+							} else {
+								Log.i(TAG, "threads[" + i + "]==null");
 							}
-							if(gyrExecutor!=null){
-								gyrExecutor.awaitTermination(10, TimeUnit.SECONDS);
-							}
-							if(magsExecutor!=null){
-								magsExecutor.awaitTermination(10, TimeUnit.SECONDS);
-							}
-							if(pressureExecutor!=null){
-								pressureExecutor.awaitTermination(10, TimeUnit.SECONDS);
-							}
-							if(rotationExecutor!=null){
-								rotationExecutor.awaitTermination(10, TimeUnit.SECONDS);
-							}
-							if(temperatureExecutor!=null){
-								temperatureExecutor.awaitTermination(10, TimeUnit.SECONDS);
-							}
-
-						handler.sendEmptyMessage(Condition.DATA_SAVED);
+						}
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
+					Log.i(TAG,"发送结束对话框信息");
+					handler.sendEmptyMessage(Condition.DATA_SAVED);
 				}
 				else{
 					Log.w(TAG,"handler==null");
@@ -185,57 +102,73 @@ public class DataCollectionService extends Service {
 		super.onDestroy();
 	}
 
+	/**
+	 * 准备采集数据前的数据
+	 * @return
+     */
 	private boolean prepareData(){
+		Log.i(TAG,"prepareData()");
 		if(chooseSensor!=null&&chooseSensor.length==MainActivity.NUMBER_SENSOR){
-			int i;
-			if(chooseSensor[MainActivity.INDEX_ACC]) {
-				accSensorDatas = new AccSensor[Condition.FAST_FLUSH_INTERVAL];
-				for (i = 0; i < accSensorDatas.length; ++i) {
-					accSensorDatas[i] = new AccSensor();
+			queues=new LinkedBlockingQueue[chooseSensor.length];
+			dataSaveTasks=new DataSaveTask[chooseSensor.length];
+			threads=new Thread[chooseSensor.length];
+
+			String filePath,header;
+			for(int i=0;i<chooseSensor.length;i++){
+				if(chooseSensor[i]==true){
+					queues[i]=new LinkedBlockingQueue<>();
+					switch(i){
+						case MainActivity.INDEX_ACC:
+							filePath=subDir+"/"+ Condition.ACC_FILENAME;
+							///header="Time\taccX\taccY\taccZ";
+							header="accX\taccY\taccZ";
+							break;
+
+						case MainActivity.INDEX_GYR:
+							filePath=subDir+"/"+Condition.GYR_FILENAME;
+							///header="Time\tgyrX\tgyrY\tgyrZ";
+							header="gyrX\tgyrY\tgyrZ";
+							break;
+
+						case MainActivity.INDEX_MAG:
+							filePath=subDir+"/"+Condition.MAGS_FILENAME;
+							///header="Time\tmagX\tmagY\tmagZ";
+							header="magX\tmagY\tmagZ";
+							break;
+
+						case MainActivity.INDEX_PRESSURE:
+							filePath=subDir+"/"+Condition.PRE_ALT_FILENAME;
+							///header="Time\tPressure\tAltitude";
+							header="Pressure\tAltitude";
+							break;
+
+						case MainActivity.INDEX_ROTATION:
+							filePath=subDir+"/"+Condition.ROTATION_FILENAME;
+							///header="Time\tPitch(x)\tRoll(y)\tAzimuth(z)";
+							header="Pitch(x)\tRoll(y)\tAzimuth(z)";
+							break;
+
+						case MainActivity.INDEX_TEMPERATURE:
+							filePath=subDir+"/"+Condition.TEMPERATURE_FILENAME;
+							///header="Time\tTemperature";
+							header="Temperature";
+							break;
+
+						default:
+							Log.w(TAG,"prepareData() error");
+							continue;
+					}
+					Log.i(TAG,"prepareData() : filePath=="+filePath);
+					dataSaveTasks[i]=new DataSaveTask(
+							queues[i],
+							filePath,
+							header
+					);
+					threads[i]=new Thread(dataSaveTasks[i]);
 				}
-				accExecutor = Executors.newSingleThreadExecutor();
 			}
 
-			if(chooseSensor[MainActivity.INDEX_GYR]) {
-				gyrSensorDatas = new GyrSensor[Condition.FAST_FLUSH_INTERVAL];
-				for (i = 0; i < gyrSensorDatas.length; ++i) {
-					gyrSensorDatas[i] = new GyrSensor();
-				}
-				gyrExecutor = Executors.newSingleThreadExecutor();
-			}
-
-			if(chooseSensor[MainActivity.INDEX_MAG]) {
-				magsSensorDatas = new MagsSensor[Condition.MID_FLUSH_INTERVAL];
-				for (i = 0; i < magsSensorDatas.length; ++i) {
-					magsSensorDatas[i] = new MagsSensor();
-				}
-				magsExecutor = Executors.newSingleThreadExecutor();
-			}
-
-			if(chooseSensor[MainActivity.INDEX_PRESSURE]) {
-				pressureSensorDatas = new PressureSensor[Condition.MID_FLUSH_INTERVAL];
-				for (i = 0; i < pressureSensorDatas.length; ++i) {
-					pressureSensorDatas[i] = new PressureSensor();
-				}
-				pressureExecutor = Executors.newSingleThreadExecutor();
-			}
-
-			if(chooseSensor[MainActivity.INDEX_ROTATION]) {
-				rotationSensorDatas = new RotationSensor[Condition.MID_FLUSH_INTERVAL];
-				for (i = 0; i < rotationSensorDatas.length; ++i) {
-					rotationSensorDatas[i] = new RotationSensor();
-				}
-				rotationExecutor = Executors.newSingleThreadExecutor();
-			}
-
-			if(chooseSensor[MainActivity.INDEX_TEMPERATURE]) {
-				temperatureSensorDatas = new TemperatureSensor[Condition.SLOW_FLUSH_INTERVAL];
-				for (i = 0; i < temperatureSensorDatas.length; ++i) {
-					temperatureSensorDatas[i] = new TemperatureSensor();
-				}
-				temperatureExecutor = Executors.newSingleThreadExecutor();
-			}
-			Log.d(TAG,"prepareData(): prepare data succed");
+			Log.d(TAG,"prepareData(): prepare data succeed");
 			return true;
 		}
 		else{
@@ -244,6 +177,10 @@ public class DataCollectionService extends Service {
 		}
 	}
 
+	/**
+	 * 注册传感器的监听器
+	 * @return
+     */
 	private boolean registerListeners() {
 		Log.i(TAG,"registerListeners()");
 
@@ -286,11 +223,51 @@ public class DataCollectionService extends Service {
 			return false;
 		}
 	}
-	
+
 	private void unregisterListeners(){
 		mSensorManager.unregisterListener(mySensorListener);
 	}
 
+	/**
+	 * 创建数据存放的目录
+	 * @return
+     */
+	private boolean createDataDir(){
+		Log.i(TAG,"createDataDir()");
+
+		File appFileDir=new File(APP_FILE_DIR);
+		if(appFileDir.exists()==false||appFileDir.isDirectory()==false){
+			appFileDir.mkdirs();
+		}
+
+		int maxNumber=0;
+		int tem;
+		String[] names=appFileDir.list();
+		if(names!=null){
+			Log.d(TAG,"names!=null");
+			for(String name:names){
+				if(name.matches("[0-9]{1,}")) {
+					Log.i(TAG,"name.matches(\"[0-9]{1,}\")==ture");
+					tem = Integer.parseInt(name);
+					if (maxNumber < tem) {
+						maxNumber = tem;
+					}
+				}
+				else{
+					Log.i(TAG,"name.matches(\"[0-9]{1,}\")==false");
+					continue;
+				}
+			}
+		}
+		else{
+			Log.w(TAG,"names==null");
+		}
+		Log.i(TAG,"maxNumber=="+maxNumber);
+		subDir=appFileDir.getPath()+"/"+(maxNumber+1);
+		Log.i(TAG,subDir);
+		(new File(subDir)).mkdir();
+		return true;
+	}
 
 	/**
 	 * MyBinder作为代理，让外界与DataCollectService能够进行通信
@@ -304,13 +281,29 @@ public class DataCollectionService extends Service {
 			DataCollectionService.this.handler=handler;
 		}
 
+		/**
+		 * 设置所选择的传感器
+		 * @param chooseSensor
+         */
 		public void setChooseSensor(boolean[] chooseSensor){
 			DataCollectionService.this.chooseSensor=chooseSensor;
 		}
 
+		/**
+		 * 启动数据收集
+		 * @return
+         */
 		public boolean beginDataCollecting(){
+			Log.i(TAG,"beginDataCollecting()");
+			createDataDir();
 			if(prepareData()==true){
-				Utilities.createDataFile(DataCollectionService.this.chooseSensor);
+				//启动数据存储线程
+				for(int i=0;i<threads.length;i++){
+					if(threads[i]!=null){
+						threads[i].start();
+					}
+				}
+
 				if(registerListeners()==true){
 					return true;
 				}
@@ -333,79 +326,45 @@ public class DataCollectionService extends Service {
 		@Override
 		public void onSensorChanged(SensorEvent event) {
 			switch(event.sensor.getType()){
-			case Sensor.TYPE_LINEAR_ACCELERATION:///
-				//Log.d(TAG,"linear acceleration changed");
-				accSensorDatas[accLength].time=Utilities.getTime();
-				accSensorDatas[accLength].accels[0]=event.values[0];
-				accSensorDatas[accLength].accels[1]=event.values[1];
-				accSensorDatas[accLength].accels[2]=event.values[2];
-				accels=event.values;
-				++accLength;
-				if(accLength>=accSensorDatas.length){
-					accExecutor.execute(new AccCollectionTask(accSensorDatas,accSensorDatas.length));
-					accLength=0;
-				}
-				break;
-			case Sensor.TYPE_GYROSCOPE:
-				gyrSensorDatas[gyrLength].time=Utilities.getTime();
-				//gyrSensorDatas[gyrLength].gyr=event.values;
-				gyrSensorDatas[gyrLength].gyr[0]=event.values[0];
-				gyrSensorDatas[gyrLength].gyr[1]=event.values[1];
-				gyrSensorDatas[gyrLength].gyr[2]=event.values[2];
-				++gyrLength;
-				if(gyrLength>=gyrSensorDatas.length){
-					gyrExecutor.execute(new GyrCollectionTask(gyrSensorDatas,gyrSensorDatas.length));
-					gyrLength=0;
-				}
-				break;
-			case Sensor.TYPE_MAGNETIC_FIELD:
-				magsSensorDatas[magsLength].time=Utilities.getTime();
-				magsSensorDatas[magsLength].mags[0]=event.values[0];
-				magsSensorDatas[magsLength].mags[1]=event.values[1];
-				magsSensorDatas[magsLength].mags[2]=event.values[2];
-				mags=event.values;
-				++magsLength;
-				if(magsLength>=magsSensorDatas.length){
-					magsExecutor.execute(new MagsCollectionTask(magsSensorDatas,magsSensorDatas.length));
-					magsLength=0;
-				}
-				break;
-			case Sensor.TYPE_ROTATION_VECTOR:
-				rotationSensorDatas[rotationLength].time=Utilities.getTime();
-				SensorManager.getRotationMatrix(rotationMatrix, null, accels, mags);
-				SensorManager.getOrientation(rotationMatrix, rotationSensorDatas[rotationLength].attitude);
-				rotationSensorDatas[rotationLength].attitude[0]=(float) Math.toDegrees(rotationSensorDatas[rotationLength].attitude[1]);
-				rotationSensorDatas[rotationLength].attitude[1]=(float) Math.toDegrees(rotationSensorDatas[rotationLength].attitude[2]);
-				rotationSensorDatas[rotationLength].attitude[2]=(float) Math.toDegrees(rotationSensorDatas[rotationLength].attitude[0]);
-				++rotationLength;
-				if(rotationLength>=rotationSensorDatas.length){
-					rotationExecutor.execute(new RotationCollectionTask(rotationSensorDatas,rotationLength));
-					rotationLength=0;
-				}
-				break;
-			case Sensor.TYPE_PRESSURE:
-				pressureSensorDatas[pressureLength].time=Utilities.getTime();
-				pressureSensorDatas[pressureLength].pressure=event.values[0];
-				pressureSensorDatas[pressureLength].pressureAttitude=
-						SensorManager.getAltitude(
-								SensorManager.PRESSURE_STANDARD_ATMOSPHERE, 
-								pressureSensorDatas[pressureLength].pressure);
-				++pressureLength;
-				if(pressureLength>=pressureSensorDatas.length){
-					pressureExecutor.execute(new PressureCollectionTask(pressureSensorDatas,pressureSensorDatas.length));
-					pressureLength=0;
-				}
-				break;
-			case Sensor.TYPE_AMBIENT_TEMPERATURE:
-				temperatureSensorDatas[temperatureLength].temperature=event.values[0];
-				++temperatureLength;
-				if(temperatureLength>=temperatureSensorDatas.length){
-					temperatureExecutor.execute(new TemperatureCollectionTask(temperatureSensorDatas,temperatureSensorDatas.length));
-					temperatureLength=0;
-				}
-				break;
+				case Sensor.TYPE_LINEAR_ACCELERATION:
+					//Log.d(TAG,"linear acceleration changed");
+					queues[MainActivity.INDEX_ACC].offer(
+							new Data(event.timestamp,event.values)
+					);
+					break;
+				case Sensor.TYPE_GYROSCOPE:
+					queues[MainActivity.INDEX_GYR].offer(
+							new Data(event.timestamp,event.values)
+					);
+					break;
+				case Sensor.TYPE_MAGNETIC_FIELD:///此数据很奇怪
+					queues[MainActivity.INDEX_MAG].offer(
+							new Data(event.timestamp,event.values)
+					);
+					break;
+				case Sensor.TYPE_ROTATION_VECTOR:
+					///这里的计算方法看着有点不妥
+					queues[MainActivity.INDEX_ROTATION].offer(
+							new Data(event.timestamp,event.values)
+					);
+					break;
+				case Sensor.TYPE_PRESSURE:
+					queues[MainActivity.INDEX_PRESSURE].offer(
+							new PressureData(
+									event.timestamp,
+									event.values,
+									SensorManager.getAltitude(
+											SensorManager.PRESSURE_STANDARD_ATMOSPHERE,
+											event.values[0]))
+					);
+					break;
+				case Sensor.TYPE_AMBIENT_TEMPERATURE:
+					queues[MainActivity.INDEX_TEMPERATURE].offer(
+							new Data(event.timestamp,event.values)
+					);
+					break;
 			}
 		}
-		
+
 	}
 }

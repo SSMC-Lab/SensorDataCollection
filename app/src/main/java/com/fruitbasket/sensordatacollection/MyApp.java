@@ -1,10 +1,6 @@
 package com.fruitbasket.sensordatacollection;
 
 import java.io.File;
-import java.io.IOException;
-
-import com.fruitbasket.sensordatacollection.utilities.ExcelProcessor;
-import com.fruitbasket.sensordatacollection.utilities.Utilities;
 
 import android.app.Application;
 import android.util.Log;

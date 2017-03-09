@@ -70,11 +70,11 @@
                 "from": {
                     "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values-zh-rCN\\strings.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 512,
+                        "startOffset": 567,
                         "endColumn": 50,
-                        "endOffset": 558
+                        "endOffset": 613
                     }
                 }
             },
@@ -716,11 +716,11 @@
                 "from": {
                     "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values-zh-rCN\\strings.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 564,
+                        "startOffset": 619,
                         "endColumn": 61,
-                        "endOffset": 621
+                        "endOffset": 676
                     }
                 }
             },
@@ -754,11 +754,11 @@
                 "from": {
                     "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values-zh-rCN\\strings.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 629,
+                        "startOffset": 684,
                         "endColumn": 57,
-                        "endOffset": 682
+                        "endOffset": 737
                     }
                 }
             },

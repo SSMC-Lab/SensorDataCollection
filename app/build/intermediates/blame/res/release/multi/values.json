@@ -355,11 +355,11 @@
                 "from": {
                     "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 610,
+                        "startOffset": 676,
                         "endColumn": 64,
-                        "endOffset": 670
+                        "endOffset": 736
                     }
                 }
             },
@@ -1001,11 +1001,11 @@
                 "from": {
                     "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 676,
+                        "startOffset": 742,
                         "endColumn": 84,
-                        "endOffset": 756
+                        "endOffset": 822
                     }
                 }
             },
@@ -1039,11 +1039,11 @@
                 "from": {
                     "file": "E:\\StudyResource\\Java\\AndroidSourceProgram\\SensorDataCollection\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 764,
+                        "startOffset": 830,
                         "endColumn": 70,
-                        "endOffset": 830
+                        "endOffset": 896
                     }
                 }
             },

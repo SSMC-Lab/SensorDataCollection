@@ -10,6 +10,7 @@
     <string name="pressure_sensor">气压传感器</string>
     <string name="rotating_vector_sensor">旋转矢量传感器</string>
     <string name="temperature_sensor">温度计</string>
+    <!--<string name="select_time">是否记录时间</string>-->
     <string name="begin_collecting">开始采集：</string>
     <string name="prompt">数据将会存放在根目录下的SensorData文件夹中</string>
 

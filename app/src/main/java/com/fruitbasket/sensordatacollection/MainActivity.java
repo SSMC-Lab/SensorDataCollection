@@ -1,8 +1,6 @@
 package com.fruitbasket.sensordatacollection;
 
 import android.app.ProgressDialog;
-import android.app.Service;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -22,6 +20,8 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends Activity {
     private static final String TAG = "MainActivity";
+
+    ///迁移这些常量的位置
     public static final int NUMBER_SENSOR =6;
     public static final int INDEX_ACC=0;
     public static final int INDEX_GYR=1;
@@ -81,6 +81,7 @@ public class MainActivity extends Activity {
     @Override
     public void onStop() {
         super.onStop();
+        Log.i(TAG,"onStop()");
     }
 
     @Override
@@ -157,6 +158,7 @@ public class MainActivity extends Activity {
 
         @Override
         public void handleMessage(Message msg){
+            Log.i(TAG,"handleMessage()");
 
             if(msg.what==Condition.BEGIN_SAVE_DATA){
                 progressDialog = new ProgressDialog(MainActivity.this);
@@ -167,6 +169,7 @@ public class MainActivity extends Activity {
                 progressDialog.show();
             }
             else if(msg.what==Condition.DATA_SAVED){
+                Log.i(TAG,"msg.what==Condition.DATA_SAVED");
                 if(progressDialog!=null){
                     progressDialog.dismiss();
                 }

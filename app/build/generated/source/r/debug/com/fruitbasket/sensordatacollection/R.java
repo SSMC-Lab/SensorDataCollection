@@ -63,23 +63,16 @@ containing a value of this type.
         public static final int logoall=0x7f020003;
     }
     public static final class id {
-        public static final int acc_ckbox=0x7f0a000c;
-        public static final int action_settings=0x7f0a0011;
+        public static final int action_settings=0x7f0a000a;
         public static final int adjust_height=0x7f0a0000;
         public static final int adjust_width=0x7f0a0001;
-        public static final int alert_ok=0x7f0a0010;
         public static final int check_box_acc=0x7f0a0003;
         public static final int check_box_gyr=0x7f0a0004;
         public static final int check_box_mag=0x7f0a0005;
         public static final int check_box_pressure=0x7f0a0006;
         public static final int check_box_rotation=0x7f0a0007;
         public static final int check_box_temperature=0x7f0a0008;
-        public static final int gyr_ckbox=0x7f0a000d;
-        public static final int mag_ckbox=0x7f0a000a;
         public static final int none=0x7f0a0002;
-        public static final int pre_ckbox=0x7f0a000f;
-        public static final int rot_ckbox=0x7f0a000e;
-        public static final int tem_ckbox=0x7f0a000b;
         public static final int toggle_button_begin=0x7f0a0009;
     }
     public static final class integer {
@@ -87,7 +80,6 @@ containing a value of this type.
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int alertlayout=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f090000;
